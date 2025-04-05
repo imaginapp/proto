@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package imagin.core;
+
+option go_package = "github.com/imaginapp/proto_core/go/imagin/core";
+
+message Metadata {
+  int32                   schema_version   = 1;
+  repeated MessageMention message_mentions = 2;
+}
+
+message MessageMention {
+  string                          account_id = 1;
+  repeated MessageMentionPosition positions  = 2;
+}
+
+message MessageMentionPosition {
+  uint32 start = 1;
+  uint32 end   = 2;
+}

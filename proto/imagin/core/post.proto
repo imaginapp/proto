@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package imagin.core;
+
+option go_package = "github.com/imaginapp/proto_core/go/imagin/core";
+
+import "google/protobuf/timestamp.proto";
+import "imagin/core/contentdata.proto";
+import "imagin/core/metadata.proto";
+
+message PostData {
+  int32                     schema_version  = 1;
+  string                    cid             = 2;
+  google.protobuf.Timestamp created_time    = 3;
+  repeated imagin.core.ContentData content  = 4;
+  string                           message  = 5;
+  Metadata                         metadata = 6;
+}
