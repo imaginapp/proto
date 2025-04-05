@@ -6,6 +6,7 @@ option go_package = "imagin/service";
 
 import "imagin/external/service/v1/version.proto";
 import "imagin/external/service/v1/content.proto";
+import "imagin/external/service/v1/signup.proto";
 
 service ImaginService {
   rpc Version(VersionRequest) returns (VersionResponse) {}
@@ -17,4 +18,7 @@ service ImaginService {
   rpc AddDag(AddDagRequest) returns (AddDagResponse) {}
   rpc GetDag(GetDagRequest) returns (GetDagResponse) {}
   rpc GetDags(GetDagsRequest) returns (GetDagsResponse) {}
+  // Signup requests
+  rpc GetRegistrationPolicy(GetRegistrationPolicyRequest)
+      returns (GetRegistrationPolicyResponse) {}
 }
