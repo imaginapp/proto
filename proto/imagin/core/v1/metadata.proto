@@ -5,16 +5,16 @@ package imagin.core.v1;
 option go_package = "imagin/core";
 
 message Metadata {
-  int32                   schema_version   = 1;
+  int32 schema_version = 1;
   repeated MessageMention message_mentions = 2;
 }
 
 message MessageMention {
-  string                          account_id = 1;
-  repeated MessageMentionPosition positions  = 2;
+  string account_id = 1;
+  repeated MessageMentionPosition positions = 2;
 }
 
 message MessageMentionPosition {
   uint32 start = 1;
-  uint32 end   = 2;
+  uint32 end = 2;
 }

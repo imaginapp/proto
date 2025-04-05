@@ -2,17 +2,17 @@ syntax = "proto3";
 
 package imagin.core.v1;
 
-option go_package = "imagin/core";
-
 import "google/protobuf/timestamp.proto";
 import "imagin/core/v1/content_data.proto";
 import "imagin/core/v1/metadata.proto";
 
+option go_package = "imagin/core";
+
 message CommentData {
-  int32                      schema_version = 1;
-  string                     cid            = 2;
-  google.protobuf.Timestamp  created_time   = 3;
-  imagin.core.v1.ContentData content        = 4;
-  string                     message        = 5;
-  Metadata                   metadata       = 6;
+  int32 schema_version = 1;
+  string cid = 2;
+  google.protobuf.Timestamp created_time = 3;
+  imagin.core.v1.ContentData content = 4;
+  string message = 5;
+  Metadata metadata = 6;
 }

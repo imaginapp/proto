@@ -15,41 +15,41 @@ message ContentData {
 //
 // Image Content
 message ContentDataImage {
-  string                   data      = 1;
-  ContentDataImageType     data_type = 2;
-  ContentDataImageMetadata metadata  = 3;
+  string data = 1;
+  ContentDataImageType data_type = 2;
+  ContentDataImageMetadata metadata = 3;
 }
 
 enum ContentDataImageType {
   CONTENT_DATA_IMAGE_TYPE_UNSPECIFIED = 0;
-  CONTENT_DATA_IMAGE_TYPE_FILE        = 1;
-  CONTENT_DATA_IMAGE_TYPE_IPFS_CID    = 2;
-  CONTENT_DATA_IMAGE_TYPE_URL         = 3;
+  CONTENT_DATA_IMAGE_TYPE_FILE = 1;
+  CONTENT_DATA_IMAGE_TYPE_IPFS_CID = 2;
+  CONTENT_DATA_IMAGE_TYPE_URL = 3;
 }
 
 message ContentDataImageMetadata {
-  uint32 width     = 1;
-  uint32 height    = 2;
+  uint32 width = 1;
+  uint32 height = 2;
   string blur_hash = 3;
 }
 
 //
 // Video content
 message ContentDataVideo {
-  string                   data      = 1;
-  ContentDataVideoType     data_type = 2;
-  ContentDataImage         thumbnail = 3;
-  ContentDataVideoMetadata metadata  = 4;
+  string data = 1;
+  ContentDataVideoType data_type = 2;
+  ContentDataImage thumbnail = 3;
+  ContentDataVideoMetadata metadata = 4;
 }
 
 message ContentDataVideoMetadata {
-  uint32 width            = 1;
-  uint32 height           = 2;
-  float  duration_seconds = 3;
+  uint32 width = 1;
+  uint32 height = 2;
+  float duration_seconds = 3;
 }
 
 enum ContentDataVideoType {
   CONTENT_DATA_VIDEO_TYPE_UNSPECIFIED = 0;
-  CONTENT_DATA_VIDEO_TYPE_FILE        = 1;
-  CONTENT_DATA_VIDEO_TYPE_HASH        = 2;
+  CONTENT_DATA_VIDEO_TYPE_FILE = 1;
+  CONTENT_DATA_VIDEO_TYPE_HASH = 2;
 }

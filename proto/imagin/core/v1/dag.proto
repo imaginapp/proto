@@ -2,28 +2,28 @@ syntax = "proto3";
 
 package imagin.core.v1;
 
-option go_package = "imagin/core";
-
 import "google/protobuf/timestamp.proto";
+
+option go_package = "imagin/core";
 
 // The type of the dag
 enum DagType {
   DAG_TYPE_UNSPECIFIED = 0;
-  DAG_TYPE_PROFILE     = 1;
-  DAG_TYPE_POST        = 2;
-  DAG_TYPE_COMMENT     = 3;
+  DAG_TYPE_PROFILE = 1;
+  DAG_TYPE_POST = 2;
+  DAG_TYPE_COMMENT = 3;
 }
 
 // a dag item
 message Dag {
-  int32                     schema_version = 1;
-  string                    cid            = 2;
-  google.protobuf.Timestamp created_time   = 3;
-  DagType                   dag_type       = 4;
-  string                    root           = 5;
-  string                    prev           = 6;
-  string                    data           = 7;
-  bytes                     signature      = 8;
+  int32 schema_version = 1;
+  string cid = 2;
+  google.protobuf.Timestamp created_time = 3;
+  DagType dag_type = 4;
+  string root = 5;
+  string prev = 6;
+  string data = 7;
+  bytes signature = 8;
 }
 
 message Dags {

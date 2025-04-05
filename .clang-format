@@ -2,5 +2,17 @@ Language: Proto
 BasedOnStyle: Google
 IndentWidth: 2
 ColumnLimit: 80
-AlignConsecutiveAssignments: true
-AlignConsecutiveDeclarations: true
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+# Additional Buf-friendly settings
+ReflowComments: true
+SortIncludes: true
+SpacesBeforeTrailingComments: 2
+AllowShortBlocksOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AlignTrailingComments: true
+BreakBeforeBraces: Attach
+# Proto-specific settings
+SpaceBeforeAssignmentOperators: true
+CommentPragmas: '^ IWYU pragma:'
+ForEachMacros: ['RANGES_FOR', 'FOREACH']
