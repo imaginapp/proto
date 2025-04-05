@@ -9,5 +9,7 @@ plugins:
   # Dart plugin
   - remote: buf.build/protocolbuffers/dart
     out: dart/lib
+    include_imports: true
+    include_wkt: true
     # Optional Dart plugin options:
     # opt: grpc=true

@@ -8,3 +8,4 @@ environment:
 dependencies:
   protobuf: ^4.0.0
   grpc: ^4.0.0
+  fixnum: ^1.1.1
