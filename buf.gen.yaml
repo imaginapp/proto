@@ -17,3 +17,9 @@ plugins:
     include_wkt: true
     opt:
       - grpc
+    # Swift plugin
+  - remote: buf.build/apple/swift
+    out: swift/Sources/Generated
+    opt:
+      - Visibility=Public
+      - FileNaming=PathToUnderscores
