@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package imagin.external.service.v1;
+
+import "imagin/external/message/v1/registration_policy.proto";
+
+option go_package = "imagin/service";
+
+message GetRegistrationPolicyRequest {}
+
+message GetRegistrationPolicyResponse {
+  imagin.external.message.v1.RegistrationPolicyType type = 1;
+  oneof                  details {
+    imagin.external.message.v1.OpenPolicyDetails open = 2;
+  }
+}
