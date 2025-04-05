@@ -7,10 +7,24 @@ import "imagin/external/message/v1/registration_policy.proto";
 option go_package = "imagin/service";
 
 message GetRegistrationPolicyRequest {}
-
 message GetRegistrationPolicyResponse {
   imagin.external.message.v1.RegistrationPolicyType type = 1;
   oneof details {
     imagin.external.message.v1.OpenPolicyDetails open = 2;
   }
+}
+
+message CheckInviteCodeRequest {
+  string code = 1;
+}
+message CheckInviteCodeResponse {
+  bool is_valid = 1;
+}
+
+message CreateAccountRequest {
+  string account_id = 1;
+  string invite_code = 2;
+}
+message CreateAccountResponse {
+  string message_id = 1;
 }

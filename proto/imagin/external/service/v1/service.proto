@@ -20,4 +20,6 @@ service ImaginService {
   rpc GetDags(GetDagsRequest) returns (GetDagsResponse) {}
   // Signup requests
   rpc GetRegistrationPolicy(GetRegistrationPolicyRequest) returns (GetRegistrationPolicyResponse) {}
+  rpc CheckInviteCode(CheckInviteCodeRequest) returns (CheckInviteCodeResponse) {}
+  rpc CreateAccount(CreateAccountRequest) returns (CreateAccountResponse) {}
 }
