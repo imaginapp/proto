@@ -4,6 +4,7 @@ package imagin.external.service.v1;
 
 option go_package = "imagin/service";
 
+import "imagin/external/service/v1/version.proto";
 import "imagin/external/service/v1/content.proto";
 
 service ImaginService {

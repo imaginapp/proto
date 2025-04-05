@@ -6,12 +6,6 @@ import "imagin/core/v1/dag.proto";
 
 option go_package = "imagin/service";
 
-// Version
-message VersionRequest {}
-message VersionResponse {
-  string id = 1;
-}
-
 // AddFileStream
 message AddFileStreamRequest {
   bytes data = 1;
