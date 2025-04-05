@@ -20,8 +20,8 @@ const ProfileData$json = {
     {'1': 'schema_version', '3': 1, '4': 1, '5': 5, '10': 'schemaVersion'},
     {'1': 'cid', '3': 2, '4': 1, '5': 9, '10': 'cid'},
     {'1': 'created_time', '3': 3, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'createdTime'},
-    {'1': 'avatar', '3': 4, '4': 1, '5': 11, '6': '.imagin.core.v1.ContentDataImage', '10': 'avatar'},
-    {'1': 'background', '3': 5, '4': 1, '5': 11, '6': '.imagin.core.v1.ContentDataImage', '10': 'background'},
+    {'1': 'avatar', '3': 4, '4': 1, '5': 11, '6': '.imagin.core.v1.ContentData', '10': 'avatar'},
+    {'1': 'background', '3': 5, '4': 1, '5': 11, '6': '.imagin.core.v1.ContentData', '10': 'background'},
     {'1': 'name', '3': 6, '4': 1, '5': 9, '10': 'name'},
     {'1': 'website', '3': 7, '4': 1, '5': 9, '10': 'website'},
     {'1': 'about', '3': 8, '4': 1, '5': 9, '10': 'about'},
@@ -32,8 +32,8 @@ const ProfileData$json = {
 final $typed_data.Uint8List profileDataDescriptor = $convert.base64Decode(
     'CgtQcm9maWxlRGF0YRIlCg5zY2hlbWFfdmVyc2lvbhgBIAEoBVINc2NoZW1hVmVyc2lvbhIQCg'
     'NjaWQYAiABKAlSA2NpZBI9CgxjcmVhdGVkX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYu'
-    'VGltZXN0YW1wUgtjcmVhdGVkVGltZRI4CgZhdmF0YXIYBCABKAsyIC5pbWFnaW4uY29yZS52MS'
-    '5Db250ZW50RGF0YUltYWdlUgZhdmF0YXISQAoKYmFja2dyb3VuZBgFIAEoCzIgLmltYWdpbi5j'
-    'b3JlLnYxLkNvbnRlbnREYXRhSW1hZ2VSCmJhY2tncm91bmQSEgoEbmFtZRgGIAEoCVIEbmFtZR'
-    'IYCgd3ZWJzaXRlGAcgASgJUgd3ZWJzaXRlEhQKBWFib3V0GAggASgJUgVhYm91dA==');
+    'VGltZXN0YW1wUgtjcmVhdGVkVGltZRIzCgZhdmF0YXIYBCABKAsyGy5pbWFnaW4uY29yZS52MS'
+    '5Db250ZW50RGF0YVIGYXZhdGFyEjsKCmJhY2tncm91bmQYBSABKAsyGy5pbWFnaW4uY29yZS52'
+    'MS5Db250ZW50RGF0YVIKYmFja2dyb3VuZBISCgRuYW1lGAYgASgJUgRuYW1lEhgKB3dlYnNpdG'
+    'UYByABKAlSB3dlYnNpdGUSFAoFYWJvdXQYCCABKAlSBWFib3V0');
 

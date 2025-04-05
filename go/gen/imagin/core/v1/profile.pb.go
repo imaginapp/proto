@@ -27,8 +27,8 @@ type ProfileData struct {
 	SchemaVersion int32                  `protobuf:"varint,1,opt,name=schema_version,json=schemaVersion,proto3" json:"schema_version,omitempty"`
 	Cid           string                 `protobuf:"bytes,2,opt,name=cid,proto3" json:"cid,omitempty"`
 	CreatedTime   *timestamppb.Timestamp `protobuf:"bytes,3,opt,name=created_time,json=createdTime,proto3" json:"created_time,omitempty"`
-	Avatar        *ContentDataImage      `protobuf:"bytes,4,opt,name=avatar,proto3" json:"avatar,omitempty"`
-	Background    *ContentDataImage      `protobuf:"bytes,5,opt,name=background,proto3" json:"background,omitempty"`
+	Avatar        *ContentData           `protobuf:"bytes,4,opt,name=avatar,proto3" json:"avatar,omitempty"`
+	Background    *ContentData           `protobuf:"bytes,5,opt,name=background,proto3" json:"background,omitempty"`
 	Name          string                 `protobuf:"bytes,6,opt,name=name,proto3" json:"name,omitempty"`
 	Website       string                 `protobuf:"bytes,7,opt,name=website,proto3" json:"website,omitempty"`
 	About         string                 `protobuf:"bytes,8,opt,name=about,proto3" json:"about,omitempty"`
@@ -87,14 +87,14 @@ func (x *ProfileData) GetCreatedTime() *timestamppb.Timestamp {
 	return nil
 }
 
-func (x *ProfileData) GetAvatar() *ContentDataImage {
+func (x *ProfileData) GetAvatar() *ContentData {
 	if x != nil {
 		return x.Avatar
 	}
 	return nil
 }
 
-func (x *ProfileData) GetBackground() *ContentDataImage {
+func (x *ProfileData) GetBackground() *ContentData {
 	if x != nil {
 		return x.Background
 	}
@@ -126,18 +126,18 @@ var File_imagin_core_v1_profile_proto protoreflect.FileDescriptor
 
 const file_imagin_core_v1_profile_proto_rawDesc = "" +
 	"\n" +
-	"\x1cimagin/core/v1/profile.proto\x12\x0eimagin.core.v1\x1a\x1fgoogle/protobuf/timestamp.proto\x1a!imagin/core/v1/content_data.proto\"\xc5\x02\n" +
+	"\x1cimagin/core/v1/profile.proto\x12\x0eimagin.core.v1\x1a\x1fgoogle/protobuf/timestamp.proto\x1a!imagin/core/v1/content_data.proto\"\xbb\x02\n" +
 	"\vProfileData\x12%\n" +
 	"\x0eschema_version\x18\x01 \x01(\x05R\rschemaVersion\x12\x10\n" +
 	"\x03cid\x18\x02 \x01(\tR\x03cid\x12=\n" +
-	"\fcreated_time\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\vcreatedTime\x128\n" +
-	"\x06avatar\x18\x04 \x01(\v2 .imagin.core.v1.ContentDataImageR\x06avatar\x12@\n" +
+	"\fcreated_time\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\vcreatedTime\x123\n" +
+	"\x06avatar\x18\x04 \x01(\v2\x1b.imagin.core.v1.ContentDataR\x06avatar\x12;\n" +
 	"\n" +
-	"background\x18\x05 \x01(\v2 .imagin.core.v1.ContentDataImageR\n" +
+	"background\x18\x05 \x01(\v2\x1b.imagin.core.v1.ContentDataR\n" +
 	"background\x12\x12\n" +
 	"\x04name\x18\x06 \x01(\tR\x04name\x12\x18\n" +
 	"\awebsite\x18\a \x01(\tR\awebsite\x12\x14\n" +
-	"\x05about\x18\b \x01(\tR\x05aboutB\rZ\vimagin/coreb\x06proto3"
+	"\x05about\x18\b \x01(\tR\x05aboutB<Z:github.com/imaginapp/proto_core/go/gen/imagin/core/v1;coreb\x06proto3"
 
 var (
 	file_imagin_core_v1_profile_proto_rawDescOnce sync.Once
@@ -155,12 +155,12 @@ var file_imagin_core_v1_profile_proto_msgTypes = make([]protoimpl.MessageInfo, 1
 var file_imagin_core_v1_profile_proto_goTypes = []any{
 	(*ProfileData)(nil),           // 0: imagin.core.v1.ProfileData
 	(*timestamppb.Timestamp)(nil), // 1: google.protobuf.Timestamp
-	(*ContentDataImage)(nil),      // 2: imagin.core.v1.ContentDataImage
+	(*ContentData)(nil),           // 2: imagin.core.v1.ContentData
 }
 var file_imagin_core_v1_profile_proto_depIdxs = []int32{
 	1, // 0: imagin.core.v1.ProfileData.created_time:type_name -> google.protobuf.Timestamp
-	2, // 1: imagin.core.v1.ProfileData.avatar:type_name -> imagin.core.v1.ContentDataImage
-	2, // 2: imagin.core.v1.ProfileData.background:type_name -> imagin.core.v1.ContentDataImage
+	2, // 1: imagin.core.v1.ProfileData.avatar:type_name -> imagin.core.v1.ContentData
+	2, // 2: imagin.core.v1.ProfileData.background:type_name -> imagin.core.v1.ContentData
 	3, // [3:3] is the sub-list for method output_type
 	3, // [3:3] is the sub-list for method input_type
 	3, // [3:3] is the sub-list for extension type_name

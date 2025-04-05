@@ -13,15 +13,15 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../../google/protobuf/timestamp.pb.dart' as $1;
+import '../../../../google/protobuf/timestamp.pb.dart' as $10;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 class Pin extends $pb.GeneratedMessage {
   factory Pin({
     $core.String? cid,
-    $1.Timestamp? createdTime,
-    $1.Timestamp? expireTime,
+    $10.Timestamp? createdTime,
+    $10.Timestamp? expireTime,
   }) {
     final $result = create();
     if (cid != null) {
@@ -41,8 +41,8 @@ class Pin extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Pin', package: const $pb.PackageName(_omitMessageNames ? '' : 'imagin.external.message.v1'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'cid')
-    ..aOM<$1.Timestamp>(2, _omitFieldNames ? '' : 'createdTime', subBuilder: $1.Timestamp.create)
-    ..aOM<$1.Timestamp>(3, _omitFieldNames ? '' : 'expireTime', subBuilder: $1.Timestamp.create)
+    ..aOM<$10.Timestamp>(2, _omitFieldNames ? '' : 'createdTime', subBuilder: $10.Timestamp.create)
+    ..aOM<$10.Timestamp>(3, _omitFieldNames ? '' : 'expireTime', subBuilder: $10.Timestamp.create)
     ..hasRequiredFields = false
   ;
 
@@ -77,26 +77,26 @@ class Pin extends $pb.GeneratedMessage {
   void clearCid() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $1.Timestamp get createdTime => $_getN(1);
+  $10.Timestamp get createdTime => $_getN(1);
   @$pb.TagNumber(2)
-  set createdTime($1.Timestamp v) { $_setField(2, v); }
+  set createdTime($10.Timestamp v) { $_setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasCreatedTime() => $_has(1);
   @$pb.TagNumber(2)
   void clearCreatedTime() => $_clearField(2);
   @$pb.TagNumber(2)
-  $1.Timestamp ensureCreatedTime() => $_ensure(1);
+  $10.Timestamp ensureCreatedTime() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $1.Timestamp get expireTime => $_getN(2);
+  $10.Timestamp get expireTime => $_getN(2);
   @$pb.TagNumber(3)
-  set expireTime($1.Timestamp v) { $_setField(3, v); }
+  set expireTime($10.Timestamp v) { $_setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasExpireTime() => $_has(2);
   @$pb.TagNumber(3)
   void clearExpireTime() => $_clearField(3);
   @$pb.TagNumber(3)
-  $1.Timestamp ensureExpireTime() => $_ensure(2);
+  $10.Timestamp ensureExpireTime() => $_ensure(2);
 }
 
 

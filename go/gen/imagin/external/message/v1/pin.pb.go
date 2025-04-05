@@ -91,7 +91,7 @@ const file_imagin_external_message_v1_pin_proto_rawDesc = "" +
 	"\x03cid\x18\x01 \x01(\tR\x03cid\x12=\n" +
 	"\fcreated_time\x18\x02 \x01(\v2\x1a.google.protobuf.TimestampR\vcreatedTime\x12;\n" +
 	"\vexpire_time\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\n" +
-	"expireTimeB\x19Z\x17imagin/external/messageb\x06proto3"
+	"expireTimeBKZIgithub.com/imaginapp/proto_core/go/gen/imagin/external/message/v1;messageb\x06proto3"
 
 var (
 	file_imagin_external_message_v1_pin_proto_rawDescOnce sync.Once

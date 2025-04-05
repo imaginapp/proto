@@ -117,7 +117,7 @@ const file_imagin_core_v1_comment_proto_rawDesc = "" +
 	"\fcreated_time\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\vcreatedTime\x125\n" +
 	"\acontent\x18\x04 \x01(\v2\x1b.imagin.core.v1.ContentDataR\acontent\x12\x18\n" +
 	"\amessage\x18\x05 \x01(\tR\amessage\x124\n" +
-	"\bmetadata\x18\x06 \x01(\v2\x18.imagin.core.v1.MetadataR\bmetadataB\rZ\vimagin/coreb\x06proto3"
+	"\bmetadata\x18\x06 \x01(\v2\x18.imagin.core.v1.MetadataR\bmetadataB<Z:github.com/imaginapp/proto_core/go/gen/imagin/core/v1;coreb\x06proto3"
 
 var (
 	file_imagin_core_v1_comment_proto_rawDescOnce sync.Once

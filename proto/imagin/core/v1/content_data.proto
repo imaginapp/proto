@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package imagin.core.v1;
 
-option go_package = "imagin/core";
+option go_package = "github.com/imaginapp/proto_core/go/gen/imagin/core/v1;core";
 
 message ContentData {
   int32 schema_version = 1;

@@ -13,8 +13,8 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/timestamp.pb.dart' as $1;
-import 'content_data.pb.dart' as $2;
+import '../../../google/protobuf/timestamp.pb.dart' as $10;
+import 'content_data.pb.dart' as $11;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
@@ -22,9 +22,9 @@ class ProfileData extends $pb.GeneratedMessage {
   factory ProfileData({
     $core.int? schemaVersion,
     $core.String? cid,
-    $1.Timestamp? createdTime,
-    $2.ContentDataImage? avatar,
-    $2.ContentDataImage? background,
+    $10.Timestamp? createdTime,
+    $11.ContentData? avatar,
+    $11.ContentData? background,
     $core.String? name,
     $core.String? website,
     $core.String? about,
@@ -63,9 +63,9 @@ class ProfileData extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ProfileData', package: const $pb.PackageName(_omitMessageNames ? '' : 'imagin.core.v1'), createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'schemaVersion', $pb.PbFieldType.O3)
     ..aOS(2, _omitFieldNames ? '' : 'cid')
-    ..aOM<$1.Timestamp>(3, _omitFieldNames ? '' : 'createdTime', subBuilder: $1.Timestamp.create)
-    ..aOM<$2.ContentDataImage>(4, _omitFieldNames ? '' : 'avatar', subBuilder: $2.ContentDataImage.create)
-    ..aOM<$2.ContentDataImage>(5, _omitFieldNames ? '' : 'background', subBuilder: $2.ContentDataImage.create)
+    ..aOM<$10.Timestamp>(3, _omitFieldNames ? '' : 'createdTime', subBuilder: $10.Timestamp.create)
+    ..aOM<$11.ContentData>(4, _omitFieldNames ? '' : 'avatar', subBuilder: $11.ContentData.create)
+    ..aOM<$11.ContentData>(5, _omitFieldNames ? '' : 'background', subBuilder: $11.ContentData.create)
     ..aOS(6, _omitFieldNames ? '' : 'name')
     ..aOS(7, _omitFieldNames ? '' : 'website')
     ..aOS(8, _omitFieldNames ? '' : 'about')
@@ -112,37 +112,37 @@ class ProfileData extends $pb.GeneratedMessage {
   void clearCid() => $_clearField(2);
 
   @$pb.TagNumber(3)
-  $1.Timestamp get createdTime => $_getN(2);
+  $10.Timestamp get createdTime => $_getN(2);
   @$pb.TagNumber(3)
-  set createdTime($1.Timestamp v) { $_setField(3, v); }
+  set createdTime($10.Timestamp v) { $_setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasCreatedTime() => $_has(2);
   @$pb.TagNumber(3)
   void clearCreatedTime() => $_clearField(3);
   @$pb.TagNumber(3)
-  $1.Timestamp ensureCreatedTime() => $_ensure(2);
+  $10.Timestamp ensureCreatedTime() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $2.ContentDataImage get avatar => $_getN(3);
+  $11.ContentData get avatar => $_getN(3);
   @$pb.TagNumber(4)
-  set avatar($2.ContentDataImage v) { $_setField(4, v); }
+  set avatar($11.ContentData v) { $_setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasAvatar() => $_has(3);
   @$pb.TagNumber(4)
   void clearAvatar() => $_clearField(4);
   @$pb.TagNumber(4)
-  $2.ContentDataImage ensureAvatar() => $_ensure(3);
+  $11.ContentData ensureAvatar() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $2.ContentDataImage get background => $_getN(4);
+  $11.ContentData get background => $_getN(4);
   @$pb.TagNumber(5)
-  set background($2.ContentDataImage v) { $_setField(5, v); }
+  set background($11.ContentData v) { $_setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasBackground() => $_has(4);
   @$pb.TagNumber(5)
   void clearBackground() => $_clearField(5);
   @$pb.TagNumber(5)
-  $2.ContentDataImage ensureBackground() => $_ensure(4);
+  $11.ContentData ensureBackground() => $_ensure(4);
 
   @$pb.TagNumber(6)
   $core.String get name => $_getSZ(5);

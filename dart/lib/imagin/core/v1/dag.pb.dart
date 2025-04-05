@@ -13,7 +13,7 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/timestamp.pb.dart' as $1;
+import '../../../google/protobuf/timestamp.pb.dart' as $10;
 import 'dag.pbenum.dart';
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
@@ -25,7 +25,7 @@ class Dag extends $pb.GeneratedMessage {
   factory Dag({
     $core.int? schemaVersion,
     $core.String? cid,
-    $1.Timestamp? createdTime,
+    $10.Timestamp? createdTime,
     DagType? dagType,
     $core.String? root,
     $core.String? prev,
@@ -66,7 +66,7 @@ class Dag extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Dag', package: const $pb.PackageName(_omitMessageNames ? '' : 'imagin.core.v1'), createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'schemaVersion', $pb.PbFieldType.O3)
     ..aOS(2, _omitFieldNames ? '' : 'cid')
-    ..aOM<$1.Timestamp>(3, _omitFieldNames ? '' : 'createdTime', subBuilder: $1.Timestamp.create)
+    ..aOM<$10.Timestamp>(3, _omitFieldNames ? '' : 'createdTime', subBuilder: $10.Timestamp.create)
     ..e<DagType>(4, _omitFieldNames ? '' : 'dagType', $pb.PbFieldType.OE, defaultOrMaker: DagType.DAG_TYPE_UNSPECIFIED, valueOf: DagType.valueOf, enumValues: DagType.values)
     ..aOS(5, _omitFieldNames ? '' : 'root')
     ..aOS(6, _omitFieldNames ? '' : 'prev')
@@ -115,15 +115,15 @@ class Dag extends $pb.GeneratedMessage {
   void clearCid() => $_clearField(2);
 
   @$pb.TagNumber(3)
-  $1.Timestamp get createdTime => $_getN(2);
+  $10.Timestamp get createdTime => $_getN(2);
   @$pb.TagNumber(3)
-  set createdTime($1.Timestamp v) { $_setField(3, v); }
+  set createdTime($10.Timestamp v) { $_setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasCreatedTime() => $_has(2);
   @$pb.TagNumber(3)
   void clearCreatedTime() => $_clearField(3);
   @$pb.TagNumber(3)
-  $1.Timestamp ensureCreatedTime() => $_ensure(2);
+  $10.Timestamp ensureCreatedTime() => $_ensure(2);
 
   @$pb.TagNumber(4)
   DagType get dagType => $_getN(3);

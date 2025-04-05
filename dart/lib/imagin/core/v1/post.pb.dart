@@ -13,9 +13,9 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/timestamp.pb.dart' as $1;
-import 'content_data.pb.dart' as $2;
-import 'metadata.pb.dart' as $3;
+import '../../../google/protobuf/timestamp.pb.dart' as $10;
+import 'content_data.pb.dart' as $11;
+import 'metadata.pb.dart' as $12;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
@@ -23,10 +23,10 @@ class PostData extends $pb.GeneratedMessage {
   factory PostData({
     $core.int? schemaVersion,
     $core.String? cid,
-    $1.Timestamp? createdTime,
-    $core.Iterable<$2.ContentData>? content,
+    $10.Timestamp? createdTime,
+    $core.Iterable<$11.ContentData>? content,
     $core.String? message,
-    $3.Metadata? metadata,
+    $12.Metadata? metadata,
   }) {
     final $result = create();
     if (schemaVersion != null) {
@@ -56,10 +56,10 @@ class PostData extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PostData', package: const $pb.PackageName(_omitMessageNames ? '' : 'imagin.core.v1'), createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'schemaVersion', $pb.PbFieldType.O3)
     ..aOS(2, _omitFieldNames ? '' : 'cid')
-    ..aOM<$1.Timestamp>(3, _omitFieldNames ? '' : 'createdTime', subBuilder: $1.Timestamp.create)
-    ..pc<$2.ContentData>(4, _omitFieldNames ? '' : 'content', $pb.PbFieldType.PM, subBuilder: $2.ContentData.create)
+    ..aOM<$10.Timestamp>(3, _omitFieldNames ? '' : 'createdTime', subBuilder: $10.Timestamp.create)
+    ..pc<$11.ContentData>(4, _omitFieldNames ? '' : 'content', $pb.PbFieldType.PM, subBuilder: $11.ContentData.create)
     ..aOS(5, _omitFieldNames ? '' : 'message')
-    ..aOM<$3.Metadata>(6, _omitFieldNames ? '' : 'metadata', subBuilder: $3.Metadata.create)
+    ..aOM<$12.Metadata>(6, _omitFieldNames ? '' : 'metadata', subBuilder: $12.Metadata.create)
     ..hasRequiredFields = false
   ;
 
@@ -103,18 +103,18 @@ class PostData extends $pb.GeneratedMessage {
   void clearCid() => $_clearField(2);
 
   @$pb.TagNumber(3)
-  $1.Timestamp get createdTime => $_getN(2);
+  $10.Timestamp get createdTime => $_getN(2);
   @$pb.TagNumber(3)
-  set createdTime($1.Timestamp v) { $_setField(3, v); }
+  set createdTime($10.Timestamp v) { $_setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasCreatedTime() => $_has(2);
   @$pb.TagNumber(3)
   void clearCreatedTime() => $_clearField(3);
   @$pb.TagNumber(3)
-  $1.Timestamp ensureCreatedTime() => $_ensure(2);
+  $10.Timestamp ensureCreatedTime() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $pb.PbList<$2.ContentData> get content => $_getList(3);
+  $pb.PbList<$11.ContentData> get content => $_getList(3);
 
   @$pb.TagNumber(5)
   $core.String get message => $_getSZ(4);
@@ -126,15 +126,15 @@ class PostData extends $pb.GeneratedMessage {
   void clearMessage() => $_clearField(5);
 
   @$pb.TagNumber(6)
-  $3.Metadata get metadata => $_getN(5);
+  $12.Metadata get metadata => $_getN(5);
   @$pb.TagNumber(6)
-  set metadata($3.Metadata v) { $_setField(6, v); }
+  set metadata($12.Metadata v) { $_setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasMetadata() => $_has(5);
   @$pb.TagNumber(6)
   void clearMetadata() => $_clearField(6);
   @$pb.TagNumber(6)
-  $3.Metadata ensureMetadata() => $_ensure(5);
+  $12.Metadata ensureMetadata() => $_ensure(5);
 }
 
 
