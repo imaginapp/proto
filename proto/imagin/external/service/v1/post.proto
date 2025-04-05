@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package imagin.external.service.v1;
+
+import "imagin/external/message/v1/post.proto";
+
+option go_package = "imagin/service";
+
+message PostRequest {
+  string id = 1;
+}
+message PostResponse {
+  imagin.external.message.v1.Post post = 1;
+}
+
+message PostRawRequest {
+  string id = 1;
+}
+message PostRawResponse {
+  imagin.external.message.v1.PostRaw raw = 1;
+}

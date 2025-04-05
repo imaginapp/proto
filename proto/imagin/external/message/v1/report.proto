@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package imagin.external.message.v1;
+
+option go_package = "imagin/external/message";
+
+enum ReportType {
+  REPORT_TYPE_UNSPECIFIED = 0;
+  REPORT_TYPE_POST = 1;
+}
+
+enum ReportReason {
+  REPORT_REASON_UNSPECIFIED = 0;
+  REPORT_REASON_DONT_LIKE = 1;
+  REPORT_REASON_HARRASMENT = 2;
+  REPORT_REASON_SPAM = 3;
+  REPORT_REASON_NUDITY_SEXUAL_CONTENT = 4;
+  REPORT_REASON_HATE_SPEACH = 5;
+  REPORT_REASON_FALSE_INFORMATION = 6;
+  REPORT_REASON_VIOLENCE = 7;
+  REPORT_REASON_SCAM = 8;
+  REPORT_REASON_SUICIDE = 9;
+  REPORT_REASON_SALE_OF_ILLEGAL_GOODS = 10;
+  REPORT_REASON_INTELLECTUAL_PROPERTY = 11;
+}
+
+message ReportPost {
+  string account_id = 1;
+  string post_id = 2;
+  ReportReason reason = 3;
+}
+
+message Report {
+  oneof report_type {
+    ReportPost post = 1;
+  }
+}

@@ -64,3 +64,11 @@ message GetDagsResponse {
   repeated imagin.core.v1.Dag dags = 1;
   bool next = 2;
 }
+
+message ContentFileRequest {
+  string id = 1;
+  bool require_pin = 2;
+}
+message ContentFileResponse {
+  bytes data = 1;
+}

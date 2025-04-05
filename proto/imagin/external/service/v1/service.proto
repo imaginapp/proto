@@ -5,6 +5,13 @@ package imagin.external.service.v1;
 import "imagin/external/service/v1/content.proto";
 import "imagin/external/service/v1/signup.proto";
 import "imagin/external/service/v1/version.proto";
+import "imagin/external/service/v1/account.proto";
+import "imagin/external/service/v1/profile.proto";
+import "imagin/external/service/v1/post.proto";
+import "imagin/external/service/v1/comment.proto";
+import "imagin/external/service/v1/report.proto";
+import "imagin/external/service/v1/purchase.proto";
+import "imagin/external/service/v1/invite.proto";
 
 option go_package = "imagin/service";
 
@@ -18,8 +25,29 @@ service ImaginService {
   rpc AddDag(AddDagRequest) returns (AddDagResponse) {}
   rpc GetDag(GetDagRequest) returns (GetDagResponse) {}
   rpc GetDags(GetDagsRequest) returns (GetDagsResponse) {}
+  rpc ContentFile(ContentFileRequest) returns (ContentFileResponse) {}
   // Signup requests
   rpc GetRegistrationPolicy(GetRegistrationPolicyRequest) returns (GetRegistrationPolicyResponse) {}
   rpc CheckInviteCode(CheckInviteCodeRequest) returns (CheckInviteCodeResponse) {}
   rpc CreateAccount(CreateAccountRequest) returns (CreateAccountResponse) {}
+  // In App Purchase Requests
+  rpc VerifyPurchase(VerifyPurchaseRequest) returns (VerifyPurchaseResponse) {}
+  rpc GetPurchase(GetPurchaseRequest) returns (GetPurchaseResponse) {}
+  // Report Request
+  rpc CreateReport(CreateReportRequest) returns (CreateReportResponse) {}
+  // Account
+  rpc Me(MeRequest) returns (MeResponse) {}
+  rpc Account(AccountRequest) returns (AccountResponse) {}
+  // Profile
+  rpc Profile(ProfileRequest) returns (ProfileResponse) {}
+  rpc ProfileRaw(ProfileRawRequest) returns (ProfileRawResponse) {}
+  rpc EnsureProfile(EnsureProfileRequest) returns (EnsureProfileResponse) {}
+  // Post
+  rpc Post(PostRequest) returns (PostResponse) {}
+  rpc PostRaw(PostRawRequest) returns (PostRawResponse) {}
+  // Comments Request
+  rpc Comment(CommentRequest) returns (CommentResponse) {}
+  rpc CommentRaw(CommentRawRequest) returns (CommentRawResponse) {}
+  // Account Invite codes Request
+  rpc InviteCodes(InviteCodesRequest) returns (InviteCodesResponse) {}
 }

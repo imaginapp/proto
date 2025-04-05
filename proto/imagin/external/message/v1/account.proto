@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package imagin.external.message.v1;
+
+option go_package = "imagin/external/message";
+
+import "imagin/external/message/v1/profile.proto";
+
+message Account {
+  string id = 1;
+  Profile profile = 2;
+  repeated string post_ids = 3;
+  bool is_self = 4;
+  IsFollowing is_following = 5;
+  bool hearts_enabled = 6;
+}
+
+// The type of the dag
+enum IsFollowing {
+  IS_FOLLOWING_UNSPECIFIED = 0;
+  IS_FOLLOWING_TRUE = 1;
+  IS_FOLLOWING_FALSE = 2;
+}

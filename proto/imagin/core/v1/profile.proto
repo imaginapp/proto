@@ -11,8 +11,8 @@ message ProfileData {
   int32 schema_version = 1;
   string cid = 2;
   google.protobuf.Timestamp created_time = 3;
-  imagin.core.v1.ContentDataImage avatar = 4;
-  imagin.core.v1.ContentDataImage background = 5;
+  imagin.core.v1.ContentData avatar = 4;
+  imagin.core.v1.ContentData background = 5;
   string name = 6;
   string website = 7;
   string about = 8;

@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package imagin.external.message.v1;
+
+option go_package = "imagin/external/message";
+
+import "imagin/core/v1/post.proto";
+import "imagin/core/v1/dag.proto";
+import "imagin/core/v1/content_data.proto";
+import "imagin/core/v1/metadata.proto";
+import "google/protobuf/timestamp.proto";
+
+message Post {
+  string id = 1;
+  google.protobuf.Timestamp created_at = 2;
+  repeated imagin.core.v1.ContentData content = 3;
+  string message = 4;
+  imagin.core.v1.Metadata metadata = 5;
+}
+
+message PostRaw {
+  imagin.core.v1.Dag dag = 1;
+  imagin.core.v1.PostData post_data = 2;
+}

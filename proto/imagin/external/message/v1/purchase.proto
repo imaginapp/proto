@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package imagin.external.message.v1;
+
+option go_package = "imagin/external/message";
+
+import "google/protobuf/timestamp.proto";
+
+enum PurchasePlatform {
+  PURCHASE_PLATFORM_UNSPECIFIED = 0;
+  PURCHASE_PLATFORM_IOS = 1;
+  PURCHASE_PLATFORM_ANDROID = 2;
+}
+
+message Purchase {
+  string id = 1;
+  string account_id = 2;
+  string purchase_id = 3;
+  string product_id = 4;
+  string source = 5;
+  PurchasePlatform platform = 6;
+  string transaction_hash = 7;
+  bool is_complete = 8;
+  google.protobuf.Timestamp created_at = 9;
+  google.protobuf.Timestamp updated_at = 10;
+}

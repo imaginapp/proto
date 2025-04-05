@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package imagin.external.service.v1;
+
+import "imagin/external/message/v1/comment.proto";
+
+option go_package = "imagin/service";
+
+message CommentRequest {
+  string id = 1;
+}
+message CommentResponse {
+  imagin.external.message.v1.Comment comment = 1;
+}
+
+message CommentRawRequest {
+  string id = 1;
+}
+message CommentRawResponse {
+  imagin.external.message.v1.CommentRaw raw = 1;
+}

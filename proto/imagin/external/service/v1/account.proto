@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package imagin.external.service.v1;
+
+import "imagin/external/message/v1/account.proto";
+
+option go_package = "imagin/service";
+
+message MeRequest {}
+message MeResponse {
+  imagin.external.message.v1.Account account = 1;
+}
+
+message AccountRequest {
+  string account_id = 1;
+}
+message AccountResponse {
+  imagin.external.message.v1.Account account = 1;
+}

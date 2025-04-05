@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package imagin.external.service.v1;
+
+import "imagin/external/message/v1/purchase.proto";
+
+option go_package = "imagin/service";
+
+message VerifyPurchaseRequest {
+  string purchase_id = 1;
+  string product_id = 2;
+  string source = 3;
+  imagin.external.message.v1.PurchasePlatform platform = 4;
+  string verification_data = 5;
+}
+message VerifyPurchaseResponse {
+  bool is_valid = 1;
+}
+
+message GetPurchaseRequest {
+  string id = 1;
+}
+message GetPurchaseResponse {
+  imagin.external.message.v1.Purchase purchase = 1;
+}

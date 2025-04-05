@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package imagin.external.service.v1;
+
+import "imagin/external/message/v1/profile.proto";
+
+option go_package = "imagin/service";
+
+message ProfileRequest {
+  string id = 1;
+}
+message ProfileResponse {
+  imagin.external.message.v1.Profile profile = 1;
+}
+
+message ProfileRawRequest {
+  string id = 1;
+}
+message ProfileRawResponse {
+  imagin.external.message.v1.ProfileRaw raw = 1;
+}
+
+message EnsureProfileRequest {
+  string id = 1;
+}
+message EnsureProfileResponse {
+  bool ok = 1;
+}
