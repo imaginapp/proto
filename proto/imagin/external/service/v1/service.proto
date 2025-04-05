@@ -3,7 +3,7 @@ syntax = "proto3";
 package imagin.external.service.v1;
 
 import "imagin/external/service/v1/content.proto";
-import "imagin/external/service/v1/signup.proto";
+import "imagin/external/service/v1/registration.proto";
 import "imagin/external/service/v1/version.proto";
 import "imagin/external/service/v1/account.proto";
 import "imagin/external/service/v1/profile.proto";
@@ -16,38 +16,47 @@ import "imagin/external/service/v1/invite.proto";
 option go_package = "imagin/service";
 
 service ImaginService {
-  rpc Version(VersionRequest) returns (VersionResponse) {}
-  // Content data requests
-  rpc AddFileStream(stream AddFileStreamRequest) returns (AddFileStreamResponse) {}
-  rpc GetFileStream(GetFileStreamRequest) returns (stream GetFileStreamResponse) {}
-  rpc AddFile(AddFileRequest) returns (AddFileResponse) {}
+  rpc GetVersion(GetVersionRequest) returns (GetVersionResponse) {}
+
+  // Content operations
+  rpc CreateFileWithStream(stream CreateFileWithStreamRequest) returns (CreateFileWithStreamResponse) {}
+  rpc GetFileWithStream(GetFileWithStreamRequest) returns (stream GetFileWithStreamResponse) {}
+  rpc CreateFile(CreateFileRequest) returns (CreateFileResponse) {}
   rpc GetFile(GetFileRequest) returns (GetFileResponse) {}
-  rpc AddDag(AddDagRequest) returns (AddDagResponse) {}
+  rpc CreateDag(CreateDagRequest) returns (CreateDagResponse) {}
   rpc GetDag(GetDagRequest) returns (GetDagResponse) {}
-  rpc GetDags(GetDagsRequest) returns (GetDagsResponse) {}
-  rpc ContentFile(ContentFileRequest) returns (ContentFileResponse) {}
-  // Signup requests
+  rpc ListDags(ListDagsRequest) returns (ListDagsResponse) {} // Fixed request name to match RPC
+  rpc GetContentFile(GetContentFileRequest) returns (GetContentFileResponse) {}
+
+  // Account operations
+  rpc GetMe(GetMeRequest) returns (GetMeResponse) {}
+  rpc GetAccount(GetAccountRequest) returns (GetAccountResponse) {}
+
+  // Profile operations
+  rpc GetProfile(GetProfileRequest) returns (GetProfileResponse) {}
+  rpc GetProfileRaw(GetProfileRawRequest) returns (GetProfileRawResponse) {}
+  rpc EnsureProfile(EnsureProfileRequest) returns (EnsureProfileResponse) {}
+
+  // Post operations
+  rpc GetPost(GetPostRequest) returns (GetPostResponse) {}
+  rpc GetPostRaw(GetPostRawRequest) returns (GetPostRawResponse) {}
+
+  // Comment operations
+  rpc GetComment(GetCommentRequest) returns (GetCommentResponse) {}
+  rpc GetCommentRaw(GetCommentRawRequest) returns (GetCommentRawResponse) {}
+
+  // Invite operations
+  rpc ListInviteCodes(ListInviteCodesRequest) returns (ListInviteCodesResponse) {}
+
+  // Registration operations
   rpc GetRegistrationPolicy(GetRegistrationPolicyRequest) returns (GetRegistrationPolicyResponse) {}
-  rpc CheckInviteCode(CheckInviteCodeRequest) returns (CheckInviteCodeResponse) {}
+  rpc ValidateInviteCode(ValidateInviteCodeRequest) returns (ValidateInviteCodeResponse) {}
   rpc CreateAccount(CreateAccountRequest) returns (CreateAccountResponse) {}
-  // In App Purchase Requests
+
+  // Purchase operations
   rpc VerifyPurchase(VerifyPurchaseRequest) returns (VerifyPurchaseResponse) {}
   rpc GetPurchase(GetPurchaseRequest) returns (GetPurchaseResponse) {}
-  // Report Request
+
+  // Report operations
   rpc CreateReport(CreateReportRequest) returns (CreateReportResponse) {}
-  // Account
-  rpc Me(MeRequest) returns (MeResponse) {}
-  rpc Account(AccountRequest) returns (AccountResponse) {}
-  // Profile
-  rpc Profile(ProfileRequest) returns (ProfileResponse) {}
-  rpc ProfileRaw(ProfileRawRequest) returns (ProfileRawResponse) {}
-  rpc EnsureProfile(EnsureProfileRequest) returns (EnsureProfileResponse) {}
-  // Post
-  rpc Post(PostRequest) returns (PostResponse) {}
-  rpc PostRaw(PostRawRequest) returns (PostRawResponse) {}
-  // Comments Request
-  rpc Comment(CommentRequest) returns (CommentResponse) {}
-  rpc CommentRaw(CommentRawRequest) returns (CommentRawResponse) {}
-  // Account Invite codes Request
-  rpc InviteCodes(InviteCodesRequest) returns (InviteCodesResponse) {}
 }

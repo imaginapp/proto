@@ -5,7 +5,7 @@ package imagin.external.service.v1;
 option go_package = "imagin/service";
 
 // Version
-message VersionRequest {}
-message VersionResponse {
+message GetVersionRequest {}
+message GetVersionResponse {
   string id = 1;
 }

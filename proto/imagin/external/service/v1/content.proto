@@ -7,26 +7,26 @@ import "imagin/core/v1/dag.proto";
 option go_package = "imagin/service";
 
 // AddFileStream
-message AddFileStreamRequest {
+message CreateFileWithStreamRequest {
   bytes data = 1;
 }
-message AddFileStreamResponse {
+message CreateFileWithStreamResponse {
   string cid = 1;
 }
 
 // GetFileStream
-message GetFileStreamRequest {
+message GetFileWithStreamRequest {
   string cid = 1;
 }
-message GetFileStreamResponse {
+message GetFileWithStreamResponse {
   bytes data = 1;
 }
 
 // AddFile
-message AddFileRequest {
+message CreateFileRequest {
   bytes data = 1;
 }
-message AddFileResponse {
+message CreateFileResponse {
   string cid = 1;
 }
 
@@ -39,10 +39,10 @@ message GetFileResponse {
 }
 
 // AddDag
-message AddDagRequest {
+message CreateDagRequest {
   imagin.core.v1.Dag dag = 1;
 }
-message AddDagResponse {
+message CreateDagResponse {
   string cid = 1;
 }
 
@@ -55,20 +55,20 @@ message GetDagResponse {
 }
 
 // GetDags
-message GetDagsRequest {
+message ListDagsRequest {
   string cid = 1;
   uint32 limit = 2;
   bool allow_partial = 3;
 }
-message GetDagsResponse {
+message ListDagsResponse {
   repeated imagin.core.v1.Dag dags = 1;
   bool next = 2;
 }
 
-message ContentFileRequest {
+message GetContentFileRequest {
   string id = 1;
   bool require_pin = 2;
 }
-message ContentFileResponse {
+message GetContentFileResponse {
   bytes data = 1;
 }

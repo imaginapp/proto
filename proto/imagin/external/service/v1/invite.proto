@@ -6,8 +6,8 @@ import "imagin/external/message/v1/invite.proto";
 
 option go_package = "imagin/service";
 
-message InviteCodesRequest {}
+message ListInviteCodesRequest {}
 
-message InviteCodesResponse {
+message ListInviteCodesResponse {
   repeated imagin.external.message.v1.Invite invites = 1;
 }

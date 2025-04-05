@@ -6,17 +6,17 @@ import "imagin/external/message/v1/profile.proto";
 
 option go_package = "imagin/service";
 
-message ProfileRequest {
+message GetProfileRequest {
   string id = 1;
 }
-message ProfileResponse {
+message GetProfileResponse {
   imagin.external.message.v1.Profile profile = 1;
 }
 
-message ProfileRawRequest {
+message GetProfileRawRequest {
   string id = 1;
 }
-message ProfileRawResponse {
+message GetProfileRawResponse {
   imagin.external.message.v1.ProfileRaw raw = 1;
 }
 

@@ -14,10 +14,10 @@ message GetRegistrationPolicyResponse {
   }
 }
 
-message CheckInviteCodeRequest {
+message ValidateInviteCodeRequest {
   string code = 1;
 }
-message CheckInviteCodeResponse {
+message ValidateInviteCodeResponse {
   bool is_valid = 1;
 }
 

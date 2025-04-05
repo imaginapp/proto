@@ -6,16 +6,16 @@ import "imagin/external/message/v1/post.proto";
 
 option go_package = "imagin/service";
 
-message PostRequest {
+message GetPostRequest {
   string id = 1;
 }
-message PostResponse {
+message GetPostResponse {
   imagin.external.message.v1.Post post = 1;
 }
 
-message PostRawRequest {
+message GetPostRawRequest {
   string id = 1;
 }
-message PostRawResponse {
+message GetPostRawResponse {
   imagin.external.message.v1.PostRaw raw = 1;
 }
