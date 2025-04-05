@@ -1,0 +1,12 @@
+version: v2
+plugins:
+  # Go plugin
+  - remote: buf.build/protocolbuffers/go
+    out: go
+    opt: paths=source_relative
+
+  # Dart plugin
+  - remote: buf.build/protocolbuffers/dart
+    out: dart/lib
+    # Optional Dart plugin options:
+    # opt: grpc=true

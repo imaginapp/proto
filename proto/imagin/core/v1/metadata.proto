@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package imagin.core;
+package imagin.core.v1;
 
-option go_package = "github.com/imaginapp/proto_core/go/imagin/core";
+option go_package = "github.com/imaginapp/proto_core/go/imagin/core/v1";
 
 message Metadata {
   int32                   schema_version   = 1;
