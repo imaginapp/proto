@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package imagin.external.service.v1;
+
+option go_package = "imagin/service";
+
+import "imagin/external/service/v1/message.proto";
+
+service ImaginService {
+  rpc Version(VersionRequest) returns (VersionResponse) {}
+  // Content data requests
+  rpc AddFileStream(stream AddFileStreamRequest) returns (AddFileStreamResponse) {}
+  rpc GetFileStream(GetFileStreamRequest) returns (stream GetFileStreamResponse) {}
+  rpc AddFile(AddFileRequest) returns (AddFileResponse) {}
+  rpc GetFile(GetFileRequest) returns (GetFileResponse) {}
+  rpc AddDag(AddDagRequest) returns (AddDagResponse) {}
+  rpc GetDag(GetDagRequest) returns (GetDagResponse) {}
+  rpc GetDags(GetDagsRequest) returns (GetDagsResponse) {}
+}

@@ -4,15 +4,16 @@ IndentWidth: 2
 ColumnLimit: 80
 AlignConsecutiveAssignments: false
 AlignConsecutiveDeclarations: false
-# Additional Buf-friendly settings
+AlignTrailingComments: true
+SpacesBeforeTrailingComments: 1  # Buf uses 1 space before comments
+SpaceBeforeAssignmentOperators: true
+SpaceAfterCCommentStart: true
+BreakBeforeBraces: Attach
 ReflowComments: true
 SortIncludes: true
-SpacesBeforeTrailingComments: 2
 AllowShortBlocksOnASingleLine: false
 AllowShortFunctionsOnASingleLine: None
-AlignTrailingComments: true
-BreakBeforeBraces: Attach
-# Proto-specific settings
-SpaceBeforeAssignmentOperators: true
-CommentPragmas: '^ IWYU pragma:'
-ForEachMacros: ['RANGES_FOR', 'FOREACH']
+DerivePointerAlignment: false
+PointerAlignment: Left
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1

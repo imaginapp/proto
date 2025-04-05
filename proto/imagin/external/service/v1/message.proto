@@ -1,0 +1,72 @@
+syntax = "proto3";
+
+package imagin.external.service.v1;
+
+import "imagin/core/v1/dag.proto";
+
+option go_package = "imagin/service";
+
+// Version
+message VersionRequest {}
+message VersionResponse {
+  string id = 1;
+}
+
+// AddFileStream
+message AddFileStreamRequest {
+  bytes data = 1;
+}
+message AddFileStreamResponse {
+  string cid = 1;
+}
+
+// GetFileStream
+message GetFileStreamRequest {
+  string cid = 1;
+}
+message GetFileStreamResponse {
+  bytes data = 1;
+}
+
+// AddFile
+message AddFileRequest {
+  bytes data = 1;
+}
+message AddFileResponse {
+  string cid = 1;
+}
+
+// GetFile
+message GetFileRequest {
+  string cid = 1;
+}
+message GetFileResponse {
+  bytes data = 1;
+}
+
+// AddDag
+message AddDagRequest {
+  imagin.core.v1.Dag dag = 1;
+}
+message AddDagResponse {
+  string cid = 1;
+}
+
+// GetDag
+message GetDagRequest {
+  string cid = 1;
+}
+message GetDagResponse {
+  imagin.core.v1.Dag dag = 1;
+}
+
+// GetDags
+message GetDagsRequest {
+  string cid = 1;
+  uint32 limit = 2;
+  bool allow_partial = 3;
+}
+message GetDagsResponse {
+  repeated imagin.core.v1.Dag dags = 1;
+  bool next = 2;
+}
