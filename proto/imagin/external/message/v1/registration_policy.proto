@@ -7,8 +7,8 @@ option go_package = "imagin/external/message";
 enum RegistrationPolicyType {
   REGISTRATION_POLICY_TYPE_UNSPECIFIED = 0;
   REGISTRATION_POLICY_TYPE_INVITE_CODE = 1;
-  REGISTRATION_POLICY_TYPE_OPEN        = 2;
-  REGISTRATION_POLICY_TYPE_CLOSED      = 3;
+  REGISTRATION_POLICY_TYPE_OPEN = 2;
+  REGISTRATION_POLICY_TYPE_CLOSED = 3;
 }
 
 message OpenPolicyDetails {

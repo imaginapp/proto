@@ -10,7 +10,7 @@ message GetRegistrationPolicyRequest {}
 
 message GetRegistrationPolicyResponse {
   imagin.external.message.v1.RegistrationPolicyType type = 1;
-  oneof                  details {
+  oneof details {
     imagin.external.message.v1.OpenPolicyDetails open = 2;
   }
 }
