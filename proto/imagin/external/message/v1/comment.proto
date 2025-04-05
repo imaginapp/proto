@@ -2,12 +2,12 @@ syntax = "proto3";
 
 package imagin.external.message.v1;
 
-option go_package = "imagin/external/message";
-
-import "imagin/core/v1/dag.proto";
+import "google/protobuf/timestamp.proto";
 import "imagin/core/v1/comment.proto";
 import "imagin/core/v1/content_data.proto";
-import "google/protobuf/timestamp.proto";
+import "imagin/core/v1/dag.proto";
+
+option go_package = "imagin/external/message";
 
 message Comment {
   string id = 1;

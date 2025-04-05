@@ -2,16 +2,16 @@ syntax = "proto3";
 
 package imagin.external.service.v1;
 
-import "imagin/external/service/v1/content.proto";
-import "imagin/external/service/v1/registration.proto";
-import "imagin/external/service/v1/version.proto";
 import "imagin/external/service/v1/account.proto";
-import "imagin/external/service/v1/profile.proto";
-import "imagin/external/service/v1/post.proto";
 import "imagin/external/service/v1/comment.proto";
-import "imagin/external/service/v1/report.proto";
-import "imagin/external/service/v1/purchase.proto";
+import "imagin/external/service/v1/content.proto";
 import "imagin/external/service/v1/invite.proto";
+import "imagin/external/service/v1/post.proto";
+import "imagin/external/service/v1/profile.proto";
+import "imagin/external/service/v1/purchase.proto";
+import "imagin/external/service/v1/registration.proto";
+import "imagin/external/service/v1/report.proto";
+import "imagin/external/service/v1/version.proto";
 
 option go_package = "imagin/service";
 

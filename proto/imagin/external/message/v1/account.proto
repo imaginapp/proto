@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package imagin.external.message.v1;
 
-option go_package = "imagin/external/message";
-
 import "imagin/external/message/v1/profile.proto";
+
+option go_package = "imagin/external/message";
 
 message Account {
   string id = 1;

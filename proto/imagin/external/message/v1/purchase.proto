@@ -2,9 +2,9 @@ syntax = "proto3";
 
 package imagin.external.message.v1;
 
-option go_package = "imagin/external/message";
-
 import "google/protobuf/timestamp.proto";
+
+option go_package = "imagin/external/message";
 
 enum PurchasePlatform {
   PURCHASE_PLATFORM_UNSPECIFIED = 0;
