@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package imagin.core.v1;
 
-option go_package = "github.com/imaginapp/proto_core/go/imagin/core/v1";
+option go_package = "imagin/core";
 
 import "google/protobuf/timestamp.proto";
 import "imagin/core/v1/content_data.proto";

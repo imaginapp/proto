@@ -1,10 +1,11 @@
 version: v2
+clean: true
 plugins:
   # Go plugin
   - remote: buf.build/protocolbuffers/go
-    out: go
-    opt: paths=source_relative
-
+    out: go/gen
+    opt:
+      - paths=source_relative
   # Dart plugin
   - remote: buf.build/protocolbuffers/dart
     out: dart/lib
