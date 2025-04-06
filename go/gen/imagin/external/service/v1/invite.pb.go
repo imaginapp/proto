@@ -7,7 +7,7 @@
 package service
 
 import (
-	v1 "github.com/imaginapp/proto_core/go/gen/imagin/external/message/v1"
+	v1 "github.com/imaginapp/proto/go/gen/imagin/external/message/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -109,7 +109,7 @@ const file_imagin_external_service_v1_invite_proto_rawDesc = "" +
 	"'imagin/external/service/v1/invite.proto\x12\x1aimagin.external.service.v1\x1a'imagin/external/message/v1/invite.proto\"\x18\n" +
 	"\x16ListInviteCodesRequest\"W\n" +
 	"\x17ListInviteCodesResponse\x12<\n" +
-	"\ainvites\x18\x01 \x03(\v2\".imagin.external.message.v1.InviteR\ainvitesBKZIgithub.com/imaginapp/proto_core/go/gen/imagin/external/service/v1;serviceb\x06proto3"
+	"\ainvites\x18\x01 \x03(\v2\".imagin.external.message.v1.InviteR\ainvitesBFZDgithub.com/imaginapp/proto/go/gen/imagin/external/service/v1;serviceb\x06proto3"
 
 var (
 	file_imagin_external_service_v1_invite_proto_rawDescOnce sync.Once

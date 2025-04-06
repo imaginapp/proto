@@ -7,7 +7,7 @@
 package service
 
 import (
-	v1 "github.com/imaginapp/proto_core/go/gen/imagin/external/message/v1"
+	v1 "github.com/imaginapp/proto/go/gen/imagin/external/message/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -248,7 +248,7 @@ const file_imagin_external_service_v1_purchase_proto_rawDesc = "" +
 	"\x12GetPurchaseRequest\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\tR\x02id\"W\n" +
 	"\x13GetPurchaseResponse\x12@\n" +
-	"\bpurchase\x18\x01 \x01(\v2$.imagin.external.message.v1.PurchaseR\bpurchaseBKZIgithub.com/imaginapp/proto_core/go/gen/imagin/external/service/v1;serviceb\x06proto3"
+	"\bpurchase\x18\x01 \x01(\v2$.imagin.external.message.v1.PurchaseR\bpurchaseBFZDgithub.com/imaginapp/proto/go/gen/imagin/external/service/v1;serviceb\x06proto3"
 
 var (
 	file_imagin_external_service_v1_purchase_proto_rawDescOnce sync.Once

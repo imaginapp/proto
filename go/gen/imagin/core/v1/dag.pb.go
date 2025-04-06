@@ -240,7 +240,7 @@ const file_imagin_core_v1_dag_proto_rawDesc = "" +
 	"\x14DAG_TYPE_UNSPECIFIED\x10\x00\x12\x14\n" +
 	"\x10DAG_TYPE_PROFILE\x10\x01\x12\x11\n" +
 	"\rDAG_TYPE_POST\x10\x02\x12\x14\n" +
-	"\x10DAG_TYPE_COMMENT\x10\x03B<Z:github.com/imaginapp/proto_core/go/gen/imagin/core/v1;coreb\x06proto3"
+	"\x10DAG_TYPE_COMMENT\x10\x03B7Z5github.com/imaginapp/proto/go/gen/imagin/core/v1;coreb\x06proto3"
 
 var (
 	file_imagin_core_v1_dag_proto_rawDescOnce sync.Once

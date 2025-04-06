@@ -170,7 +170,7 @@ const file_imagin_external_message_v1_account_proto_rawDesc = "" +
 	"\vIsFollowing\x12\x1c\n" +
 	"\x18IS_FOLLOWING_UNSPECIFIED\x10\x00\x12\x15\n" +
 	"\x11IS_FOLLOWING_TRUE\x10\x01\x12\x16\n" +
-	"\x12IS_FOLLOWING_FALSE\x10\x02BKZIgithub.com/imaginapp/proto_core/go/gen/imagin/external/message/v1;messageb\x06proto3"
+	"\x12IS_FOLLOWING_FALSE\x10\x02BFZDgithub.com/imaginapp/proto/go/gen/imagin/external/message/v1;messageb\x06proto3"
 
 var (
 	file_imagin_external_message_v1_account_proto_rawDescOnce sync.Once

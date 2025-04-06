@@ -7,7 +7,7 @@
 package service
 
 import (
-	v1 "github.com/imaginapp/proto_core/go/gen/imagin/external/message/v1"
+	v1 "github.com/imaginapp/proto/go/gen/imagin/external/message/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -127,7 +127,7 @@ const file_imagin_external_service_v1_report_proto_rawDesc = "" +
 	"\x06report\x18\x01 \x01(\v2\".imagin.external.message.v1.ReportR\x06report\x12\x18\n" +
 	"\amessage\x18\x02 \x01(\tR\amessage\"(\n" +
 	"\x14CreateReportResponse\x12\x10\n" +
-	"\x03ref\x18\x01 \x01(\tR\x03refBKZIgithub.com/imaginapp/proto_core/go/gen/imagin/external/service/v1;serviceb\x06proto3"
+	"\x03ref\x18\x01 \x01(\tR\x03refBFZDgithub.com/imaginapp/proto/go/gen/imagin/external/service/v1;serviceb\x06proto3"
 
 var (
 	file_imagin_external_service_v1_report_proto_rawDescOnce sync.Once

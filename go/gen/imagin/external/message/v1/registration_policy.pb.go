@@ -129,7 +129,7 @@ const file_imagin_external_message_v1_registration_policy_proto_rawDesc = "" +
 	"$REGISTRATION_POLICY_TYPE_UNSPECIFIED\x10\x00\x12(\n" +
 	"$REGISTRATION_POLICY_TYPE_INVITE_CODE\x10\x01\x12!\n" +
 	"\x1dREGISTRATION_POLICY_TYPE_OPEN\x10\x02\x12#\n" +
-	"\x1fREGISTRATION_POLICY_TYPE_CLOSED\x10\x03BKZIgithub.com/imaginapp/proto_core/go/gen/imagin/external/message/v1;messageb\x06proto3"
+	"\x1fREGISTRATION_POLICY_TYPE_CLOSED\x10\x03BFZDgithub.com/imaginapp/proto/go/gen/imagin/external/message/v1;messageb\x06proto3"
 
 var (
 	file_imagin_external_message_v1_registration_policy_proto_rawDescOnce sync.Once

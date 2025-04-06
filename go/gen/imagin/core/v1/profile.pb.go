@@ -137,7 +137,7 @@ const file_imagin_core_v1_profile_proto_rawDesc = "" +
 	"background\x12\x12\n" +
 	"\x04name\x18\x06 \x01(\tR\x04name\x12\x18\n" +
 	"\awebsite\x18\a \x01(\tR\awebsite\x12\x14\n" +
-	"\x05about\x18\b \x01(\tR\x05aboutB<Z:github.com/imaginapp/proto_core/go/gen/imagin/core/v1;coreb\x06proto3"
+	"\x05about\x18\b \x01(\tR\x05aboutB7Z5github.com/imaginapp/proto/go/gen/imagin/core/v1;coreb\x06proto3"
 
 var (
 	file_imagin_core_v1_profile_proto_rawDescOnce sync.Once

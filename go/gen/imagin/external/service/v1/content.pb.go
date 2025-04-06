@@ -7,7 +7,7 @@
 package service
 
 import (
-	v1 "github.com/imaginapp/proto_core/go/gen/imagin/core/v1"
+	v1 "github.com/imaginapp/proto/go/gen/imagin/core/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -806,7 +806,7 @@ const file_imagin_external_service_v1_content_proto_rawDesc = "" +
 	"\vrequire_pin\x18\x02 \x01(\bR\n" +
 	"requirePin\",\n" +
 	"\x16GetContentFileResponse\x12\x12\n" +
-	"\x04data\x18\x01 \x01(\fR\x04dataBKZIgithub.com/imaginapp/proto_core/go/gen/imagin/external/service/v1;serviceb\x06proto3"
+	"\x04data\x18\x01 \x01(\fR\x04dataBFZDgithub.com/imaginapp/proto/go/gen/imagin/external/service/v1;serviceb\x06proto3"
 
 var (
 	file_imagin_external_service_v1_content_proto_rawDescOnce sync.Once

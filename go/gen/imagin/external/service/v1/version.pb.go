@@ -109,7 +109,7 @@ const file_imagin_external_service_v1_version_proto_rawDesc = "" +
 	"(imagin/external/service/v1/version.proto\x12\x1aimagin.external.service.v1\"\x13\n" +
 	"\x11GetVersionRequest\"$\n" +
 	"\x12GetVersionResponse\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\tR\x02idBKZIgithub.com/imaginapp/proto_core/go/gen/imagin/external/service/v1;serviceb\x06proto3"
+	"\x02id\x18\x01 \x01(\tR\x02idBFZDgithub.com/imaginapp/proto/go/gen/imagin/external/service/v1;serviceb\x06proto3"
 
 var (
 	file_imagin_external_service_v1_version_proto_rawDescOnce sync.Once

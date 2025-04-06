@@ -7,7 +7,7 @@ import "imagin/core/v1/content_data.proto";
 import "imagin/core/v1/dag.proto";
 import "imagin/core/v1/profile.proto";
 
-option go_package = "github.com/imaginapp/proto_core/go/gen/imagin/external/message/v1;message";
+option go_package = "github.com/imaginapp/proto/go/gen/imagin/external/message/v1;message";
 
 message Profile {
   string id = 1;

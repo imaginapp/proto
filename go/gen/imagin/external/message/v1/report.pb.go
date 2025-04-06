@@ -300,7 +300,7 @@ const file_imagin_external_message_v1_report_proto_rawDesc = "" +
 	"\x15REPORT_REASON_SUICIDE\x10\t\x12'\n" +
 	"#REPORT_REASON_SALE_OF_ILLEGAL_GOODS\x10\n" +
 	"\x12'\n" +
-	"#REPORT_REASON_INTELLECTUAL_PROPERTY\x10\vBKZIgithub.com/imaginapp/proto_core/go/gen/imagin/external/message/v1;messageb\x06proto3"
+	"#REPORT_REASON_INTELLECTUAL_PROPERTY\x10\vBFZDgithub.com/imaginapp/proto/go/gen/imagin/external/message/v1;messageb\x06proto3"
 
 var (
 	file_imagin_external_message_v1_report_proto_rawDescOnce sync.Once

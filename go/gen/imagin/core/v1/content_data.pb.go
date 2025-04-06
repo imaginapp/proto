@@ -497,7 +497,7 @@ const file_imagin_core_v1_content_data_proto_rawDesc = "" +
 	"\x14ContentDataVideoType\x12'\n" +
 	"#CONTENT_DATA_VIDEO_TYPE_UNSPECIFIED\x10\x00\x12 \n" +
 	"\x1cCONTENT_DATA_VIDEO_TYPE_FILE\x10\x01\x12 \n" +
-	"\x1cCONTENT_DATA_VIDEO_TYPE_HASH\x10\x02B<Z:github.com/imaginapp/proto_core/go/gen/imagin/core/v1;coreb\x06proto3"
+	"\x1cCONTENT_DATA_VIDEO_TYPE_HASH\x10\x02B7Z5github.com/imaginapp/proto/go/gen/imagin/core/v1;coreb\x06proto3"
 
 var (
 	file_imagin_core_v1_content_data_proto_rawDescOnce sync.Once

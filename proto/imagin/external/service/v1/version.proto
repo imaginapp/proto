@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package imagin.external.service.v1;
 
-option go_package = "github.com/imaginapp/proto_core/go/gen/imagin/external/service/v1;service";
+option go_package = "github.com/imaginapp/proto/go/gen/imagin/external/service/v1;service";
 
 // Version
 message GetVersionRequest {}

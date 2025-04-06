@@ -111,7 +111,7 @@ const file_imagin_external_message_v1_invite_proto_rawDesc = "" +
 	"\n" +
 	"created_at\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\tcreatedAt\x129\n" +
 	"\n" +
-	"updated_at\x18\x05 \x01(\v2\x1a.google.protobuf.TimestampR\tupdatedAtBKZIgithub.com/imaginapp/proto_core/go/gen/imagin/external/message/v1;messageb\x06proto3"
+	"updated_at\x18\x05 \x01(\v2\x1a.google.protobuf.TimestampR\tupdatedAtBFZDgithub.com/imaginapp/proto/go/gen/imagin/external/message/v1;messageb\x06proto3"
 
 var (
 	file_imagin_external_message_v1_invite_proto_rawDescOnce sync.Once

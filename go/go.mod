@@ -1,4 +1,4 @@
-module github.com/imaginapp/proto_core/go
+module github.com/imaginapp/proto/go
 
 go 1.24
 

@@ -56,7 +56,7 @@ const file_imagin_external_service_v1_service_proto_rawDesc = "" +
 	"\rCreateAccount\x120.imagin.external.service.v1.CreateAccountRequest\x1a1.imagin.external.service.v1.CreateAccountResponse\"\x00\x12y\n" +
 	"\x0eVerifyPurchase\x121.imagin.external.service.v1.VerifyPurchaseRequest\x1a2.imagin.external.service.v1.VerifyPurchaseResponse\"\x00\x12p\n" +
 	"\vGetPurchase\x12..imagin.external.service.v1.GetPurchaseRequest\x1a/.imagin.external.service.v1.GetPurchaseResponse\"\x00\x12s\n" +
-	"\fCreateReport\x12/.imagin.external.service.v1.CreateReportRequest\x1a0.imagin.external.service.v1.CreateReportResponse\"\x00BKZIgithub.com/imaginapp/proto_core/go/gen/imagin/external/service/v1;serviceb\x06proto3"
+	"\fCreateReport\x12/.imagin.external.service.v1.CreateReportRequest\x1a0.imagin.external.service.v1.CreateReportResponse\"\x00BFZDgithub.com/imaginapp/proto/go/gen/imagin/external/service/v1;serviceb\x06proto3"
 
 var file_imagin_external_service_v1_service_proto_goTypes = []any{
 	(*GetVersionRequest)(nil),             // 0: imagin.external.service.v1.GetVersionRequest

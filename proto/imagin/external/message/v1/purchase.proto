@@ -4,7 +4,7 @@ package imagin.external.message.v1;
 
 import "google/protobuf/timestamp.proto";
 
-option go_package = "github.com/imaginapp/proto_core/go/gen/imagin/external/message/v1;message";
+option go_package = "github.com/imaginapp/proto/go/gen/imagin/external/message/v1;message";
 
 enum PurchasePlatform {
   PURCHASE_PLATFORM_UNSPECIFIED = 0;

@@ -191,7 +191,7 @@ const file_imagin_core_v1_metadata_proto_rawDesc = "" +
 	"\tpositions\x18\x02 \x03(\v2&.imagin.core.v1.MessageMentionPositionR\tpositions\"@\n" +
 	"\x16MessageMentionPosition\x12\x14\n" +
 	"\x05start\x18\x01 \x01(\rR\x05start\x12\x10\n" +
-	"\x03end\x18\x02 \x01(\rR\x03endB<Z:github.com/imaginapp/proto_core/go/gen/imagin/core/v1;coreb\x06proto3"
+	"\x03end\x18\x02 \x01(\rR\x03endB7Z5github.com/imaginapp/proto/go/gen/imagin/core/v1;coreb\x06proto3"
 
 var (
 	file_imagin_core_v1_metadata_proto_rawDescOnce sync.Once

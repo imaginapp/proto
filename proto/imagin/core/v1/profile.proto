@@ -5,7 +5,7 @@ package imagin.core.v1;
 import "google/protobuf/timestamp.proto";
 import "imagin/core/v1/content_data.proto";
 
-option go_package = "github.com/imaginapp/proto_core/go/gen/imagin/core/v1;core";
+option go_package = "github.com/imaginapp/proto/go/gen/imagin/core/v1;core";
 
 message ProfileData {
   int32 schema_version = 1;

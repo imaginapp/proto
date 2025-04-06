@@ -13,7 +13,7 @@ import "imagin/external/service/v1/registration.proto";
 import "imagin/external/service/v1/report.proto";
 import "imagin/external/service/v1/version.proto";
 
-option go_package = "github.com/imaginapp/proto_core/go/gen/imagin/external/service/v1;service";
+option go_package = "github.com/imaginapp/proto/go/gen/imagin/external/service/v1;service";
 
 service ImaginService {
   rpc GetVersion(GetVersionRequest) returns (GetVersionResponse) {}

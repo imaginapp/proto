@@ -213,7 +213,7 @@ const file_imagin_external_message_v1_purchase_proto_rawDesc = "" +
 	"\x10PurchasePlatform\x12!\n" +
 	"\x1dPURCHASE_PLATFORM_UNSPECIFIED\x10\x00\x12\x19\n" +
 	"\x15PURCHASE_PLATFORM_IOS\x10\x01\x12\x1d\n" +
-	"\x19PURCHASE_PLATFORM_ANDROID\x10\x02BKZIgithub.com/imaginapp/proto_core/go/gen/imagin/external/message/v1;messageb\x06proto3"
+	"\x19PURCHASE_PLATFORM_ANDROID\x10\x02BFZDgithub.com/imaginapp/proto/go/gen/imagin/external/message/v1;messageb\x06proto3"
 
 var (
 	file_imagin_external_message_v1_purchase_proto_rawDescOnce sync.Once

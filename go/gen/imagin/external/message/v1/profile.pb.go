@@ -7,7 +7,7 @@
 package message
 
 import (
-	v1 "github.com/imaginapp/proto_core/go/gen/imagin/core/v1"
+	v1 "github.com/imaginapp/proto/go/gen/imagin/core/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
@@ -186,7 +186,7 @@ const file_imagin_external_message_v1_profile_proto_rawDesc = "" +
 	"\n" +
 	"ProfileRaw\x12%\n" +
 	"\x03dag\x18\x01 \x01(\v2\x13.imagin.core.v1.DagR\x03dag\x12>\n" +
-	"\fprofile_data\x18\x02 \x01(\v2\x1b.imagin.core.v1.ProfileDataR\vprofileDataBKZIgithub.com/imaginapp/proto_core/go/gen/imagin/external/message/v1;messageb\x06proto3"
+	"\fprofile_data\x18\x02 \x01(\v2\x1b.imagin.core.v1.ProfileDataR\vprofileDataBFZDgithub.com/imaginapp/proto/go/gen/imagin/external/message/v1;messageb\x06proto3"
 
 var (
 	file_imagin_external_message_v1_profile_proto_rawDescOnce sync.Once
