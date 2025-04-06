@@ -30,6 +30,7 @@ const (
 	ImaginService_GetContentFile_FullMethodName        = "/imagin.external.service.v1.ImaginService/GetContentFile"
 	ImaginService_GetMe_FullMethodName                 = "/imagin.external.service.v1.ImaginService/GetMe"
 	ImaginService_GetAccount_FullMethodName            = "/imagin.external.service.v1.ImaginService/GetAccount"
+	ImaginService_GetAccountData_FullMethodName        = "/imagin.external.service.v1.ImaginService/GetAccountData"
 	ImaginService_GetProfile_FullMethodName            = "/imagin.external.service.v1.ImaginService/GetProfile"
 	ImaginService_GetProfileRaw_FullMethodName         = "/imagin.external.service.v1.ImaginService/GetProfileRaw"
 	ImaginService_EnsureProfile_FullMethodName         = "/imagin.external.service.v1.ImaginService/EnsureProfile"
@@ -63,6 +64,7 @@ type ImaginServiceClient interface {
 	// Account operations
 	GetMe(ctx context.Context, in *GetMeRequest, opts ...grpc.CallOption) (*GetMeResponse, error)
 	GetAccount(ctx context.Context, in *GetAccountRequest, opts ...grpc.CallOption) (*GetAccountResponse, error)
+	GetAccountData(ctx context.Context, in *GetAccountDataRequest, opts ...grpc.CallOption) (*GetAccountDataResponse, error)
 	// Profile operations
 	GetProfile(ctx context.Context, in *GetProfileRequest, opts ...grpc.CallOption) (*GetProfileResponse, error)
 	GetProfileRaw(ctx context.Context, in *GetProfileRawRequest, opts ...grpc.CallOption) (*GetProfileRawResponse, error)
@@ -210,6 +212,16 @@ func (c *imaginServiceClient) GetAccount(ctx context.Context, in *GetAccountRequ
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(GetAccountResponse)
 	err := c.cc.Invoke(ctx, ImaginService_GetAccount_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *imaginServiceClient) GetAccountData(ctx context.Context, in *GetAccountDataRequest, opts ...grpc.CallOption) (*GetAccountDataResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(GetAccountDataResponse)
+	err := c.cc.Invoke(ctx, ImaginService_GetAccountData_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
 	}
@@ -373,6 +385,7 @@ type ImaginServiceServer interface {
 	// Account operations
 	GetMe(context.Context, *GetMeRequest) (*GetMeResponse, error)
 	GetAccount(context.Context, *GetAccountRequest) (*GetAccountResponse, error)
+	GetAccountData(context.Context, *GetAccountDataRequest) (*GetAccountDataResponse, error)
 	// Profile operations
 	GetProfile(context.Context, *GetProfileRequest) (*GetProfileResponse, error)
 	GetProfileRaw(context.Context, *GetProfileRawRequest) (*GetProfileRawResponse, error)
@@ -436,6 +449,9 @@ func (UnimplementedImaginServiceServer) GetMe(context.Context, *GetMeRequest) (*
 }
 func (UnimplementedImaginServiceServer) GetAccount(context.Context, *GetAccountRequest) (*GetAccountResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetAccount not implemented")
+}
+func (UnimplementedImaginServiceServer) GetAccountData(context.Context, *GetAccountDataRequest) (*GetAccountDataResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetAccountData not implemented")
 }
 func (UnimplementedImaginServiceServer) GetProfile(context.Context, *GetProfileRequest) (*GetProfileResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetProfile not implemented")
@@ -676,6 +692,24 @@ func _ImaginService_GetAccount_Handler(srv interface{}, ctx context.Context, dec
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ImaginServiceServer).GetAccount(ctx, req.(*GetAccountRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _ImaginService_GetAccountData_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetAccountDataRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ImaginServiceServer).GetAccountData(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ImaginService_GetAccountData_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ImaginServiceServer).GetAccountData(ctx, req.(*GetAccountDataRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -974,6 +1008,10 @@ var ImaginService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetAccount",
 			Handler:    _ImaginService_GetAccount_Handler,
+		},
+		{
+			MethodName: "GetAccountData",
+			Handler:    _ImaginService_GetAccountData_Handler,
 		},
 		{
 			MethodName: "GetProfile",

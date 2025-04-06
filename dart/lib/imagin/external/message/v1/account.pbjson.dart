@@ -49,3 +49,20 @@ final $typed_data.Uint8List accountDescriptor = $convert.base64Decode(
     '1hZ2luLmV4dGVybmFsLm1lc3NhZ2UudjEuSXNGb2xsb3dpbmdSC2lzRm9sbG93aW5nEiUKDmhl'
     'YXJ0c19lbmFibGVkGAYgASgIUg1oZWFydHNFbmFibGVk');
 
+@$core.Deprecated('Use accountDataDescriptor instead')
+const AccountData$json = {
+  '1': 'AccountData',
+  '2': [
+    {'1': 'account_id', '3': 1, '4': 1, '5': 9, '10': 'accountId'},
+    {'1': 'post_cid', '3': 2, '4': 1, '5': 9, '10': 'postCid'},
+    {'1': 'profile_cid', '3': 3, '4': 1, '5': 9, '10': 'profileCid'},
+    {'1': 'hearts_enabled', '3': 4, '4': 1, '5': 8, '10': 'heartsEnabled'},
+  ],
+};
+
+/// Descriptor for `AccountData`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List accountDataDescriptor = $convert.base64Decode(
+    'CgtBY2NvdW50RGF0YRIdCgphY2NvdW50X2lkGAEgASgJUglhY2NvdW50SWQSGQoIcG9zdF9jaW'
+    'QYAiABKAlSB3Bvc3RDaWQSHwoLcHJvZmlsZV9jaWQYAyABKAlSCnByb2ZpbGVDaWQSJQoOaGVh'
+    'cnRzX2VuYWJsZWQYBCABKAhSDWhlYXJ0c0VuYWJsZWQ=');
+

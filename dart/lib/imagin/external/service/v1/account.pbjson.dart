@@ -60,3 +60,28 @@ final $typed_data.Uint8List getAccountResponseDescriptor = $convert.base64Decode
     'ChJHZXRBY2NvdW50UmVzcG9uc2USPQoHYWNjb3VudBgBIAEoCzIjLmltYWdpbi5leHRlcm5hbC'
     '5tZXNzYWdlLnYxLkFjY291bnRSB2FjY291bnQ=');
 
+@$core.Deprecated('Use getAccountDataRequestDescriptor instead')
+const GetAccountDataRequest$json = {
+  '1': 'GetAccountDataRequest',
+  '2': [
+    {'1': 'account_id', '3': 1, '4': 1, '5': 9, '10': 'accountId'},
+  ],
+};
+
+/// Descriptor for `GetAccountDataRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getAccountDataRequestDescriptor = $convert.base64Decode(
+    'ChVHZXRBY2NvdW50RGF0YVJlcXVlc3QSHQoKYWNjb3VudF9pZBgBIAEoCVIJYWNjb3VudElk');
+
+@$core.Deprecated('Use getAccountDataResponseDescriptor instead')
+const GetAccountDataResponse$json = {
+  '1': 'GetAccountDataResponse',
+  '2': [
+    {'1': 'account_data', '3': 1, '4': 1, '5': 11, '6': '.imagin.external.message.v1.AccountData', '10': 'accountData'},
+  ],
+};
+
+/// Descriptor for `GetAccountDataResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getAccountDataResponseDescriptor = $convert.base64Decode(
+    'ChZHZXRBY2NvdW50RGF0YVJlc3BvbnNlEkoKDGFjY291bnRfZGF0YRgBIAEoCzInLmltYWdpbi'
+    '5leHRlcm5hbC5tZXNzYWdlLnYxLkFjY291bnREYXRhUgthY2NvdW50RGF0YQ==');
+

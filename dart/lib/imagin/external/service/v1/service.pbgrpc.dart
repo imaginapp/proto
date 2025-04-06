@@ -74,6 +74,10 @@ class ImaginServiceClient extends $grpc.Client {
       '/imagin.external.service.v1.ImaginService/GetAccount',
       ($2.GetAccountRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $2.GetAccountResponse.fromBuffer(value));
+  static final _$getAccountData = $grpc.ClientMethod<$2.GetAccountDataRequest, $2.GetAccountDataResponse>(
+      '/imagin.external.service.v1.ImaginService/GetAccountData',
+      ($2.GetAccountDataRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.GetAccountDataResponse.fromBuffer(value));
   static final _$getProfile = $grpc.ClientMethod<$3.GetProfileRequest, $3.GetProfileResponse>(
       '/imagin.external.service.v1.ImaginService/GetProfile',
       ($3.GetProfileRequest value) => value.writeToBuffer(),
@@ -179,6 +183,10 @@ class ImaginServiceClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$2.GetAccountResponse> getAccount($2.GetAccountRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getAccount, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.GetAccountDataResponse> getAccountData($2.GetAccountDataRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getAccountData, request, options: options);
   }
 
   $grpc.ResponseFuture<$3.GetProfileResponse> getProfile($3.GetProfileRequest request, {$grpc.CallOptions? options}) {
@@ -320,6 +328,13 @@ abstract class ImaginServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $2.GetAccountRequest.fromBuffer(value),
         ($2.GetAccountResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetAccountDataRequest, $2.GetAccountDataResponse>(
+        'GetAccountData',
+        getAccountData_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.GetAccountDataRequest.fromBuffer(value),
+        ($2.GetAccountDataResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$3.GetProfileRequest, $3.GetProfileResponse>(
         'GetProfile',
         getProfile_Pre,
@@ -460,6 +475,10 @@ abstract class ImaginServiceBase extends $grpc.Service {
     return getAccount($call, await $request);
   }
 
+  $async.Future<$2.GetAccountDataResponse> getAccountData_Pre($grpc.ServiceCall $call, $async.Future<$2.GetAccountDataRequest> $request) async {
+    return getAccountData($call, await $request);
+  }
+
   $async.Future<$3.GetProfileResponse> getProfile_Pre($grpc.ServiceCall $call, $async.Future<$3.GetProfileRequest> $request) async {
     return getProfile($call, await $request);
   }
@@ -527,6 +546,7 @@ abstract class ImaginServiceBase extends $grpc.Service {
   $async.Future<$1.GetContentFileResponse> getContentFile($grpc.ServiceCall call, $1.GetContentFileRequest request);
   $async.Future<$2.GetMeResponse> getMe($grpc.ServiceCall call, $2.GetMeRequest request);
   $async.Future<$2.GetAccountResponse> getAccount($grpc.ServiceCall call, $2.GetAccountRequest request);
+  $async.Future<$2.GetAccountDataResponse> getAccountData($grpc.ServiceCall call, $2.GetAccountDataRequest request);
   $async.Future<$3.GetProfileResponse> getProfile($grpc.ServiceCall call, $3.GetProfileRequest request);
   $async.Future<$3.GetProfileRawResponse> getProfileRaw($grpc.ServiceCall call, $3.GetProfileRawRequest request);
   $async.Future<$3.EnsureProfileResponse> ensureProfile($grpc.ServiceCall call, $3.EnsureProfileRequest request);

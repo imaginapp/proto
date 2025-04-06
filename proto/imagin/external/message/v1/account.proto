@@ -21,3 +21,10 @@ enum IsFollowing {
   IS_FOLLOWING_TRUE = 1;
   IS_FOLLOWING_FALSE = 2;
 }
+
+message AccountData {
+  string account_id = 1;
+  string post_cid = 2;
+  string profile_cid = 3;
+  bool hearts_enabled = 4;
+}

@@ -190,6 +190,94 @@ func (x *GetAccountResponse) GetAccount() *v1.Account {
 	return nil
 }
 
+type GetAccountDataRequest struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	AccountId     string                 `protobuf:"bytes,1,opt,name=account_id,json=accountId,proto3" json:"account_id,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetAccountDataRequest) Reset() {
+	*x = GetAccountDataRequest{}
+	mi := &file_imagin_external_service_v1_account_proto_msgTypes[4]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetAccountDataRequest) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetAccountDataRequest) ProtoMessage() {}
+
+func (x *GetAccountDataRequest) ProtoReflect() protoreflect.Message {
+	mi := &file_imagin_external_service_v1_account_proto_msgTypes[4]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetAccountDataRequest.ProtoReflect.Descriptor instead.
+func (*GetAccountDataRequest) Descriptor() ([]byte, []int) {
+	return file_imagin_external_service_v1_account_proto_rawDescGZIP(), []int{4}
+}
+
+func (x *GetAccountDataRequest) GetAccountId() string {
+	if x != nil {
+		return x.AccountId
+	}
+	return ""
+}
+
+type GetAccountDataResponse struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	AccountData   *v1.AccountData        `protobuf:"bytes,1,opt,name=account_data,json=accountData,proto3" json:"account_data,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *GetAccountDataResponse) Reset() {
+	*x = GetAccountDataResponse{}
+	mi := &file_imagin_external_service_v1_account_proto_msgTypes[5]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *GetAccountDataResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GetAccountDataResponse) ProtoMessage() {}
+
+func (x *GetAccountDataResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_imagin_external_service_v1_account_proto_msgTypes[5]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GetAccountDataResponse.ProtoReflect.Descriptor instead.
+func (*GetAccountDataResponse) Descriptor() ([]byte, []int) {
+	return file_imagin_external_service_v1_account_proto_rawDescGZIP(), []int{5}
+}
+
+func (x *GetAccountDataResponse) GetAccountData() *v1.AccountData {
+	if x != nil {
+		return x.AccountData
+	}
+	return nil
+}
+
 var File_imagin_external_service_v1_account_proto protoreflect.FileDescriptor
 
 const file_imagin_external_service_v1_account_proto_rawDesc = "" +
@@ -202,7 +290,12 @@ const file_imagin_external_service_v1_account_proto_rawDesc = "" +
 	"\n" +
 	"account_id\x18\x01 \x01(\tR\taccountId\"S\n" +
 	"\x12GetAccountResponse\x12=\n" +
-	"\aaccount\x18\x01 \x01(\v2#.imagin.external.message.v1.AccountR\aaccountBFZDgithub.com/imaginapp/proto/go/gen/imagin/external/service/v1;serviceb\x06proto3"
+	"\aaccount\x18\x01 \x01(\v2#.imagin.external.message.v1.AccountR\aaccount\"6\n" +
+	"\x15GetAccountDataRequest\x12\x1d\n" +
+	"\n" +
+	"account_id\x18\x01 \x01(\tR\taccountId\"d\n" +
+	"\x16GetAccountDataResponse\x12J\n" +
+	"\faccount_data\x18\x01 \x01(\v2'.imagin.external.message.v1.AccountDataR\vaccountDataBFZDgithub.com/imaginapp/proto/go/gen/imagin/external/service/v1;serviceb\x06proto3"
 
 var (
 	file_imagin_external_service_v1_account_proto_rawDescOnce sync.Once
@@ -216,22 +309,26 @@ func file_imagin_external_service_v1_account_proto_rawDescGZIP() []byte {
 	return file_imagin_external_service_v1_account_proto_rawDescData
 }
 
-var file_imagin_external_service_v1_account_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_imagin_external_service_v1_account_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
 var file_imagin_external_service_v1_account_proto_goTypes = []any{
-	(*GetMeRequest)(nil),       // 0: imagin.external.service.v1.GetMeRequest
-	(*GetMeResponse)(nil),      // 1: imagin.external.service.v1.GetMeResponse
-	(*GetAccountRequest)(nil),  // 2: imagin.external.service.v1.GetAccountRequest
-	(*GetAccountResponse)(nil), // 3: imagin.external.service.v1.GetAccountResponse
-	(*v1.Account)(nil),         // 4: imagin.external.message.v1.Account
+	(*GetMeRequest)(nil),           // 0: imagin.external.service.v1.GetMeRequest
+	(*GetMeResponse)(nil),          // 1: imagin.external.service.v1.GetMeResponse
+	(*GetAccountRequest)(nil),      // 2: imagin.external.service.v1.GetAccountRequest
+	(*GetAccountResponse)(nil),     // 3: imagin.external.service.v1.GetAccountResponse
+	(*GetAccountDataRequest)(nil),  // 4: imagin.external.service.v1.GetAccountDataRequest
+	(*GetAccountDataResponse)(nil), // 5: imagin.external.service.v1.GetAccountDataResponse
+	(*v1.Account)(nil),             // 6: imagin.external.message.v1.Account
+	(*v1.AccountData)(nil),         // 7: imagin.external.message.v1.AccountData
 }
 var file_imagin_external_service_v1_account_proto_depIdxs = []int32{
-	4, // 0: imagin.external.service.v1.GetMeResponse.account:type_name -> imagin.external.message.v1.Account
-	4, // 1: imagin.external.service.v1.GetAccountResponse.account:type_name -> imagin.external.message.v1.Account
-	2, // [2:2] is the sub-list for method output_type
-	2, // [2:2] is the sub-list for method input_type
-	2, // [2:2] is the sub-list for extension type_name
-	2, // [2:2] is the sub-list for extension extendee
-	0, // [0:2] is the sub-list for field type_name
+	6, // 0: imagin.external.service.v1.GetMeResponse.account:type_name -> imagin.external.message.v1.Account
+	6, // 1: imagin.external.service.v1.GetAccountResponse.account:type_name -> imagin.external.message.v1.Account
+	7, // 2: imagin.external.service.v1.GetAccountDataResponse.account_data:type_name -> imagin.external.message.v1.AccountData
+	3, // [3:3] is the sub-list for method output_type
+	3, // [3:3] is the sub-list for method input_type
+	3, // [3:3] is the sub-list for extension type_name
+	3, // [3:3] is the sub-list for extension extendee
+	0, // [0:3] is the sub-list for field type_name
 }
 
 func init() { file_imagin_external_service_v1_account_proto_init() }
@@ -245,7 +342,7 @@ func file_imagin_external_service_v1_account_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_imagin_external_service_v1_account_proto_rawDesc), len(file_imagin_external_service_v1_account_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   4,
+			NumMessages:   6,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

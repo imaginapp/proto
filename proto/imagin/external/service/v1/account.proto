@@ -17,3 +17,10 @@ message GetAccountRequest {
 message GetAccountResponse {
   imagin.external.message.v1.Account account = 1;
 }
+
+message GetAccountDataRequest {
+  string account_id = 1;
+}
+message GetAccountDataResponse {
+  imagin.external.message.v1.AccountData account_data = 1;
+}

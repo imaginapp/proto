@@ -105,6 +105,24 @@ public struct Imagin_External_Message_V1_Account: @unchecked Sendable {
   fileprivate var _storage = _StorageClass.defaultInstance
 }
 
+public struct Imagin_External_Message_V1_AccountData: Sendable {
+  // SwiftProtobuf.Message conformance is added in an extension below. See the
+  // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
+  // methods supported on all messages.
+
+  public var accountID: String = String()
+
+  public var postCid: String = String()
+
+  public var profileCid: String = String()
+
+  public var heartsEnabled: Bool = false
+
+  public var unknownFields = SwiftProtobuf.UnknownStorage()
+
+  public init() {}
+}
+
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 fileprivate let _protobuf_package = "imagin.external.message.v1"
@@ -228,6 +246,56 @@ extension Imagin_External_Message_V1_Account: SwiftProtobuf.Message, SwiftProtob
       }
       if !storagesAreEqual {return false}
     }
+    if lhs.unknownFields != rhs.unknownFields {return false}
+    return true
+  }
+}
+
+extension Imagin_External_Message_V1_AccountData: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  public static let protoMessageName: String = _protobuf_package + ".AccountData"
+  public static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
+    1: .standard(proto: "account_id"),
+    2: .standard(proto: "post_cid"),
+    3: .standard(proto: "profile_cid"),
+    4: .standard(proto: "hearts_enabled"),
+  ]
+
+  public mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
+    while let fieldNumber = try decoder.nextFieldNumber() {
+      // The use of inline closures is to circumvent an issue where the compiler
+      // allocates stack space for every case branch when no optimizations are
+      // enabled. https://github.com/apple/swift-protobuf/issues/1034
+      switch fieldNumber {
+      case 1: try { try decoder.decodeSingularStringField(value: &self.accountID) }()
+      case 2: try { try decoder.decodeSingularStringField(value: &self.postCid) }()
+      case 3: try { try decoder.decodeSingularStringField(value: &self.profileCid) }()
+      case 4: try { try decoder.decodeSingularBoolField(value: &self.heartsEnabled) }()
+      default: break
+      }
+    }
+  }
+
+  public func traverse<V: SwiftProtobuf.Visitor>(visitor: inout V) throws {
+    if !self.accountID.isEmpty {
+      try visitor.visitSingularStringField(value: self.accountID, fieldNumber: 1)
+    }
+    if !self.postCid.isEmpty {
+      try visitor.visitSingularStringField(value: self.postCid, fieldNumber: 2)
+    }
+    if !self.profileCid.isEmpty {
+      try visitor.visitSingularStringField(value: self.profileCid, fieldNumber: 3)
+    }
+    if self.heartsEnabled != false {
+      try visitor.visitSingularBoolField(value: self.heartsEnabled, fieldNumber: 4)
+    }
+    try unknownFields.traverse(visitor: &visitor)
+  }
+
+  public static func ==(lhs: Imagin_External_Message_V1_AccountData, rhs: Imagin_External_Message_V1_AccountData) -> Bool {
+    if lhs.accountID != rhs.accountID {return false}
+    if lhs.postCid != rhs.postCid {return false}
+    if lhs.profileCid != rhs.profileCid {return false}
+    if lhs.heartsEnabled != rhs.heartsEnabled {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }

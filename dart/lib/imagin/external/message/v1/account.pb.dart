@@ -136,6 +136,98 @@ class Account extends $pb.GeneratedMessage {
   void clearHeartsEnabled() => $_clearField(6);
 }
 
+class AccountData extends $pb.GeneratedMessage {
+  factory AccountData({
+    $core.String? accountId,
+    $core.String? postCid,
+    $core.String? profileCid,
+    $core.bool? heartsEnabled,
+  }) {
+    final $result = create();
+    if (accountId != null) {
+      $result.accountId = accountId;
+    }
+    if (postCid != null) {
+      $result.postCid = postCid;
+    }
+    if (profileCid != null) {
+      $result.profileCid = profileCid;
+    }
+    if (heartsEnabled != null) {
+      $result.heartsEnabled = heartsEnabled;
+    }
+    return $result;
+  }
+  AccountData._() : super();
+  factory AccountData.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory AccountData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'AccountData', package: const $pb.PackageName(_omitMessageNames ? '' : 'imagin.external.message.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'accountId')
+    ..aOS(2, _omitFieldNames ? '' : 'postCid')
+    ..aOS(3, _omitFieldNames ? '' : 'profileCid')
+    ..aOB(4, _omitFieldNames ? '' : 'heartsEnabled')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  AccountData clone() => AccountData()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  AccountData copyWith(void Function(AccountData) updates) => super.copyWith((message) => updates(message as AccountData)) as AccountData;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static AccountData create() => AccountData._();
+  AccountData createEmptyInstance() => create();
+  static $pb.PbList<AccountData> createRepeated() => $pb.PbList<AccountData>();
+  @$core.pragma('dart2js:noInline')
+  static AccountData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AccountData>(create);
+  static AccountData? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get accountId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set accountId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasAccountId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAccountId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get postCid => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set postCid($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasPostCid() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearPostCid() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get profileCid => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set profileCid($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasProfileCid() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearProfileCid() => $_clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.bool get heartsEnabled => $_getBF(3);
+  @$pb.TagNumber(4)
+  set heartsEnabled($core.bool v) { $_setBool(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasHeartsEnabled() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearHeartsEnabled() => $_clearField(4);
+}
+
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
 const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -203,6 +203,108 @@ class GetAccountResponse extends $pb.GeneratedMessage {
   $18.Account ensureAccount() => $_ensure(0);
 }
 
+class GetAccountDataRequest extends $pb.GeneratedMessage {
+  factory GetAccountDataRequest({
+    $core.String? accountId,
+  }) {
+    final $result = create();
+    if (accountId != null) {
+      $result.accountId = accountId;
+    }
+    return $result;
+  }
+  GetAccountDataRequest._() : super();
+  factory GetAccountDataRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetAccountDataRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetAccountDataRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'imagin.external.service.v1'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'accountId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetAccountDataRequest clone() => GetAccountDataRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetAccountDataRequest copyWith(void Function(GetAccountDataRequest) updates) => super.copyWith((message) => updates(message as GetAccountDataRequest)) as GetAccountDataRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetAccountDataRequest create() => GetAccountDataRequest._();
+  GetAccountDataRequest createEmptyInstance() => create();
+  static $pb.PbList<GetAccountDataRequest> createRepeated() => $pb.PbList<GetAccountDataRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetAccountDataRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetAccountDataRequest>(create);
+  static GetAccountDataRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get accountId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set accountId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasAccountId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAccountId() => $_clearField(1);
+}
+
+class GetAccountDataResponse extends $pb.GeneratedMessage {
+  factory GetAccountDataResponse({
+    $18.AccountData? accountData,
+  }) {
+    final $result = create();
+    if (accountData != null) {
+      $result.accountData = accountData;
+    }
+    return $result;
+  }
+  GetAccountDataResponse._() : super();
+  factory GetAccountDataResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetAccountDataResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetAccountDataResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'imagin.external.service.v1'), createEmptyInstance: create)
+    ..aOM<$18.AccountData>(1, _omitFieldNames ? '' : 'accountData', subBuilder: $18.AccountData.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetAccountDataResponse clone() => GetAccountDataResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetAccountDataResponse copyWith(void Function(GetAccountDataResponse) updates) => super.copyWith((message) => updates(message as GetAccountDataResponse)) as GetAccountDataResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetAccountDataResponse create() => GetAccountDataResponse._();
+  GetAccountDataResponse createEmptyInstance() => create();
+  static $pb.PbList<GetAccountDataResponse> createRepeated() => $pb.PbList<GetAccountDataResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetAccountDataResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetAccountDataResponse>(create);
+  static GetAccountDataResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $18.AccountData get accountData => $_getN(0);
+  @$pb.TagNumber(1)
+  set accountData($18.AccountData v) { $_setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasAccountData() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearAccountData() => $_clearField(1);
+  @$pb.TagNumber(1)
+  $18.AccountData ensureAccountData() => $_ensure(0);
+}
+
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
 const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
