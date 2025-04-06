@@ -155,6 +155,74 @@ func (x *Account) GetHeartsEnabled() bool {
 	return false
 }
 
+type AccountData struct {
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	AccountId     string                 `protobuf:"bytes,1,opt,name=account_id,json=accountId,proto3" json:"account_id,omitempty"`
+	PostCid       string                 `protobuf:"bytes,2,opt,name=post_cid,json=postCid,proto3" json:"post_cid,omitempty"`
+	ProfileCid    string                 `protobuf:"bytes,3,opt,name=profile_cid,json=profileCid,proto3" json:"profile_cid,omitempty"`
+	HeartsEnabled bool                   `protobuf:"varint,4,opt,name=hearts_enabled,json=heartsEnabled,proto3" json:"hearts_enabled,omitempty"`
+	unknownFields protoimpl.UnknownFields
+	sizeCache     protoimpl.SizeCache
+}
+
+func (x *AccountData) Reset() {
+	*x = AccountData{}
+	mi := &file_imagin_external_message_v1_account_proto_msgTypes[1]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *AccountData) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*AccountData) ProtoMessage() {}
+
+func (x *AccountData) ProtoReflect() protoreflect.Message {
+	mi := &file_imagin_external_message_v1_account_proto_msgTypes[1]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use AccountData.ProtoReflect.Descriptor instead.
+func (*AccountData) Descriptor() ([]byte, []int) {
+	return file_imagin_external_message_v1_account_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *AccountData) GetAccountId() string {
+	if x != nil {
+		return x.AccountId
+	}
+	return ""
+}
+
+func (x *AccountData) GetPostCid() string {
+	if x != nil {
+		return x.PostCid
+	}
+	return ""
+}
+
+func (x *AccountData) GetProfileCid() string {
+	if x != nil {
+		return x.ProfileCid
+	}
+	return ""
+}
+
+func (x *AccountData) GetHeartsEnabled() bool {
+	if x != nil {
+		return x.HeartsEnabled
+	}
+	return false
+}
+
 var File_imagin_external_message_v1_account_proto protoreflect.FileDescriptor
 
 const file_imagin_external_message_v1_account_proto_rawDesc = "" +
@@ -166,11 +234,18 @@ const file_imagin_external_message_v1_account_proto_rawDesc = "" +
 	"\bpost_ids\x18\x03 \x03(\tR\apostIds\x12\x17\n" +
 	"\ais_self\x18\x04 \x01(\bR\x06isSelf\x12J\n" +
 	"\fis_following\x18\x05 \x01(\x0e2'.imagin.external.message.v1.IsFollowingR\visFollowing\x12%\n" +
-	"\x0ehearts_enabled\x18\x06 \x01(\bR\rheartsEnabled*Z\n" +
+	"\x0ehearts_enabled\x18\x06 \x01(\bR\rheartsEnabled\"\x8f\x01\n" +
+	"\vAccountData\x12\x1d\n" +
+	"\n" +
+	"account_id\x18\x01 \x01(\tR\taccountId\x12\x19\n" +
+	"\bpost_cid\x18\x02 \x01(\tR\apostCid\x12\x1f\n" +
+	"\vprofile_cid\x18\x03 \x01(\tR\n" +
+	"profileCid\x12%\n" +
+	"\x0ehearts_enabled\x18\x04 \x01(\bR\rheartsEnabled*Z\n" +
 	"\vIsFollowing\x12\x1c\n" +
 	"\x18IS_FOLLOWING_UNSPECIFIED\x10\x00\x12\x15\n" +
 	"\x11IS_FOLLOWING_TRUE\x10\x01\x12\x16\n" +
-	"\x12IS_FOLLOWING_FALSE\x10\x02BKZIgithub.com/imaginapp/proto/go/gen/imagin/external/message/v1;messageb\x06proto3"
+	"\x12IS_FOLLOWING_FALSE\x10\x02BFZDgithub.com/imaginapp/proto/go/gen/imagin/external/message/v1;messageb\x06proto3"
 
 var (
 	file_imagin_external_message_v1_account_proto_rawDescOnce sync.Once
@@ -185,14 +260,15 @@ func file_imagin_external_message_v1_account_proto_rawDescGZIP() []byte {
 }
 
 var file_imagin_external_message_v1_account_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_imagin_external_message_v1_account_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
+var file_imagin_external_message_v1_account_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_imagin_external_message_v1_account_proto_goTypes = []any{
-	(IsFollowing)(0), // 0: imagin.external.message.v1.IsFollowing
-	(*Account)(nil),  // 1: imagin.external.message.v1.Account
-	(*Profile)(nil),  // 2: imagin.external.message.v1.Profile
+	(IsFollowing)(0),    // 0: imagin.external.message.v1.IsFollowing
+	(*Account)(nil),     // 1: imagin.external.message.v1.Account
+	(*AccountData)(nil), // 2: imagin.external.message.v1.AccountData
+	(*Profile)(nil),     // 3: imagin.external.message.v1.Profile
 }
 var file_imagin_external_message_v1_account_proto_depIdxs = []int32{
-	2, // 0: imagin.external.message.v1.Account.profile:type_name -> imagin.external.message.v1.Profile
+	3, // 0: imagin.external.message.v1.Account.profile:type_name -> imagin.external.message.v1.Profile
 	0, // 1: imagin.external.message.v1.Account.is_following:type_name -> imagin.external.message.v1.IsFollowing
 	2, // [2:2] is the sub-list for method output_type
 	2, // [2:2] is the sub-list for method input_type
@@ -213,7 +289,7 @@ func file_imagin_external_message_v1_account_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_imagin_external_message_v1_account_proto_rawDesc), len(file_imagin_external_message_v1_account_proto_rawDesc)),
 			NumEnums:      1,
-			NumMessages:   1,
+			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
