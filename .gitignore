@@ -2,3 +2,7 @@
 .dart_tool
 # Swift
 .build
+.swiftpm
+*.xcodeproj
+*.xcworkspace
+DerivedData/
