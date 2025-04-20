@@ -23,3 +23,9 @@ plugins:
     opt:
       - Visibility=Public
       - FileNaming=PathToUnderscores
+      # Swift gRPC plugin
+  - remote: buf.build/grpc/swift
+    out: swift/Sources/Generated
+    opt:
+      - Visibility=Public
+      - FileNaming=PathToUnderscores
